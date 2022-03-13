@@ -47,7 +47,7 @@ services:
       - INFLUXDB_HOST=3.224.211.82
     volumes:
       # Mount for telegraf configuration
-      - ./dockerfiles/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+      - ./_dockerfiles/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
       # Mount for Docker API access
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
@@ -59,7 +59,7 @@ services:
     container_name: filebeat
     image: wislan/docker_winterfun:winterfun_filebeat
     volumes:
-      - ./dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./_dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker:/var/lib/docker:ro
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
