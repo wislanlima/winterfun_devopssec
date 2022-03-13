@@ -6,8 +6,8 @@
 .idea
 .coverage*
 .DS_Store
-#staticfiles
-#mediafiles
+staticfiles
+mediafiles
 client/node_modules
 *.log
 *.pot

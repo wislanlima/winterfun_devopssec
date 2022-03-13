@@ -134,3 +134,5 @@ networks:
 volumes:
     postgres_db_volume:
         driver: local
+    static_volume:
+    media_volume:
