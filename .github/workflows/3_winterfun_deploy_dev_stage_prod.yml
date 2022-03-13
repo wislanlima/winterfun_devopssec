@@ -1,4 +1,4 @@
-name: "Deploy DEV/STAGE/PROD: Winter Fun"
+name: "3 Deploy DEV/STAGE/PROD: Winter Fun"
 
 on:
   workflow_dispatch:

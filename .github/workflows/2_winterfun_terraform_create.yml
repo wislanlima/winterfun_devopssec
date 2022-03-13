@@ -1,4 +1,4 @@
-name: "Create Infra: Winter Fun"
+name: "2 Create Infra: Winter Fun"
 
 on:
   workflow_dispatch
