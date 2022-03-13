@@ -1,2 +1,0 @@
-# winterfun_devopssec
- 
