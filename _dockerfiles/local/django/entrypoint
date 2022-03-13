@@ -27,7 +27,13 @@ END
 
 until postgres_ready; do
  >&2 echo "Waiting for PostgreSQL to become available....:-("
- sleep 1
+ >&2 echo "${POSTGRES_DB}"
+ >&2 echo "${POSTGRES_USER}"
+ >&2 echo "${POSTGRES_PASSWORD}"
+ >&2 echo "${PG_HOST}"
+ >&2 echo "${PG_PORT}"  
+ >&2 echo "Waiting for PostgreSQL to become available....:-("
+ sleep 5
 done
 >&2 echo "PostgreSQL is ready!!!!...:-)"
 
