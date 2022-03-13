@@ -1,0 +1,49 @@
+name: "Wislan_Build_Deploy: x21126151_Wislan_Lima"
+
+on:
+   workflow_dispatch:
+#   push:
+#    branches: [ main ]
+
+jobs:
+  Build:
+    uses: wislanlima/aws-actions/.github/workflows/x21126151_Wislan_Lima_build.yml@main
+    secrets:
+      DOCKER_UN: ${{ secrets.DOCKER_UN }}
+      DOCKER_PWD: ${{ secrets.DOCKER_PWD }}
+#
+#  DEV-Deploy:
+#    needs: Build
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Check Out Repo
+#        uses: actions/checkout@v2
+#
+#      - name: Deploying in AWS EC2
+#        env:
+#            PRIVATE_KEY: ${{ secrets.AWS_PVT_KEY  }}
+#            USER_NAME : ubuntu
+#            HOSTNAME : ${{ secrets.x21126151_Wislan_Lima_dev_ip  }}
+#
+#        run: |
+#
+#          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+#          rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/aws_ec2_github_actions
+#          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} "
+#          cd '/home/$USER_NAME/aws_ec2_github_actions'
+#          rm private_key
+#          docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
+#          docker-compose -f docker-compose.yml up -d --build
+#          "
+#
+#  Smoke-Test:
+#    runs-on: ubuntu-latest
+#    needs: DEV-Deploy
+#    steps:
+#      - run: echo 'Smoke Tests not yet implemented.'
+#  Functional-Test:
+#    runs-on: ubuntu-latest
+#    needs: Smoke-Test
+#    steps:
+#      - run: echo 'Functional Tests not yet implemented.'
