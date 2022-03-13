@@ -25,7 +25,7 @@ provider "aws" {
 
 
 #dev instance creation
-resource "aws_instance" "x21126151_Wislan_Lima_dev" {
+resource "aws_instance" "winterfun_dev" {
   ami           = "ami-04505e74c0741db8d"
   instance_type = "t2.medium"
   subnet_id     = "subnet-01f7f9c5b9fc99986"
@@ -34,7 +34,7 @@ resource "aws_instance" "x21126151_Wislan_Lima_dev" {
   vpc_security_group_ids = ["sg-0268ecbf418effd94"]
 
   tags = {
-    Name = "x21126151_Wislan_Lima_dev"
+    Name = "winterfun_dev"
   }
 
   connection {
@@ -63,7 +63,7 @@ resource "aws_instance" "x21126151_Wislan_Lima_dev" {
 }
 
 #stage instance creation
-resource "aws_instance" "x21126151_Wislan_Lima_stage" {
+resource "aws_instance" "winterfun_stage" {
   ami           = "ami-04505e74c0741db8d"
   instance_type = "t2.medium"
   subnet_id     = "subnet-01f7f9c5b9fc99986"
@@ -72,7 +72,7 @@ resource "aws_instance" "x21126151_Wislan_Lima_stage" {
   vpc_security_group_ids = ["sg-0268ecbf418effd94"]
 
   tags = {
-    Name = "x21126151_Wislan_Lima_stage"
+    Name = "winterfun_stage"
   }
 
 
@@ -101,7 +101,7 @@ resource "aws_instance" "x21126151_Wislan_Lima_stage" {
 
 
 #prod instance creation
-resource "aws_instance" "x21126151_Wislan_Lima_prod" {
+resource "aws_instance" "winterfun_prod" {
   ami           = "ami-04505e74c0741db8d"
   instance_type = "t2.medium"
   subnet_id     = "subnet-01f7f9c5b9fc99986"
@@ -110,7 +110,7 @@ resource "aws_instance" "x21126151_Wislan_Lima_prod" {
   vpc_security_group_ids = ["sg-0268ecbf418effd94"]
 
   tags = {
-    Name = "x21126151_Wislan_Lima_prod"
+    Name = "winterfun_prod"
   }
 
   connection {
@@ -137,14 +137,14 @@ resource "aws_instance" "x21126151_Wislan_Lima_prod" {
 }
 
 #IP of instances retrieved
-output "x21126151_Wislan_Lima_prod"{
-value = "${aws_instance.x21126151_Wislan_Lima_prod.public_ip}"
+output "winterfun_prod"{
+value = "${aws_instance.winterfun_prod.public_ip}"
 }
 
-output "x21126151_Wislan_Lima_dev"{
-value = "${aws_instance.x21126151_Wislan_Lima_dev.public_ip}"
+output "winterfun_dev"{
+value = "${aws_instance.winterfun_dev.public_ip}"
 }
 
-output "x21126151_Wislan_Lima_stage"{
-value = "${aws_instance.x21126151_Wislan_Lima_stage.public_ip}"
+output "winterfun_stage"{
+value = "${aws_instance.winterfun_stage.public_ip}"
 }
