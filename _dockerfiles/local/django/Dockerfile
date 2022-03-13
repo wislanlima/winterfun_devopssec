@@ -29,7 +29,7 @@ COPY ./_dockerfiles/local/django/entrypoint /entrypoint
 RUN sed -i 's/\r$//g' /entrypoint
 RUN chmod +x /entrypoint
 
-COPY ./dockerfiles/local/django/start /start
+COPY ./_dockerfiles/local/django/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
