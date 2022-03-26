@@ -115,6 +115,28 @@ services:
     networks:
       - winterfun_network
 
+  api_django:
+    container_name: api_django
+    build:
+      context: .
+      dockerfile: ./_dockerfiles/local/django/Dockerfile
+    command: /start
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+    expose:
+      - "8080"
+    ports:
+      - 8080:8080
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    networks:
+      - winterfun_network
+
 networks:
     winterfun_network:
         driver: bridge

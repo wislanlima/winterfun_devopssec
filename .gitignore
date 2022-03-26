@@ -9,7 +9,7 @@
 staticfiles
 mediafiles
 client/node_modules
-*.log
+#*.log
 *.pot
 *.pyc
 __pycache__
