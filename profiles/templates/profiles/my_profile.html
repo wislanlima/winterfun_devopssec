@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+profile detail
+{% endblock title %}
+
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ profile.avatar.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ profile.first_name }}</h2>
+          <p class="text-secondary">{{ profile.user.email }}</p>
+        </div>
+      </div>
+      <!-- FORM HERE -->
+
+      <div class="media-content">
+
+          <p class="title is-4">{{ profile.first_name }} {{ profile.last_name }}</p>
+          <p class="title is-4">{{ profile.about_me }}</p>
+          <p class="title is-4">{{ profile.country }}</p>
+            <p class="title is-4">{{ profile.city }}</p>
+            <p class="title is-4">{{ profile.slug }}</p>
+
+      </div>
+
+    </div>
+{% endblock content %}

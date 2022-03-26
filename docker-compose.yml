@@ -107,6 +107,7 @@ services:
       - winterfun_network
 
   api_django:
+    container_name: api_django
     build:
       context: .
       dockerfile: ./_dockerfiles/local/django/Dockerfile

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-8 mb-4 mb-md-0">
+        {% for obj in qs %}
+            <div class="content-section">
+                <div class="right floated meta">
+                <div class="ui grid">
+                    <div class="row">
+                        {% ifequal request.user obj.author.user %}
+                            <a href="{% url 'posts:post-update' obj.id %}"><button class="btn btn-outline-info">Update</button></a>
+                            <a href="{% url 'posts:post-delete' obj.id %}"><button class="btn btn-danger ">Delete</button></a>
+                        {% endifequal %}
+                    </div>
+                </div>
+
+                </div>
+                <img class="rounded-circle article-img" src={{obj.author.avatar.url}}>
+                {{ obj.author.user }} - {{ obj.created_at|timesince}} ago
+            </div>
+            <div class="content-section">
+                {% if obj.image %}
+                    <img class="img-fluid" src={{obj.image.url}}>
+                {% endif %}
+            </div>
+
+        {% endfor %}
+    </div>
+    <div class="col-md-4 mb-4 mb-md-0">
+        <div class="content-section">
+            {% if post_added %}
+                <div class="ui green message">Post added</div>
+            {% endif %}
+            <form action="" method="POST" class='ui form' enctype="multipart/form-data">
+                {% csrf_token %}
+                {{p_form|crispy}}
+                <button type='submit' name="submit_p_form" class="btn btn-outline-info w-full mt-5">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

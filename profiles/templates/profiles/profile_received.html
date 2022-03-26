@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+my invites
+{% endblock title %}
+
+{% block content %}
+
+    {% if is_empty %}
+        <h1>There is no friends here</h1>
+        <h3> Follow this <a href="{% url 'profiles:profiles-list' %}">Link</a> </h3>
+    {% endif %}
+
+    {% for obj in friends %}
+        <div class="ui segment">
+            <div class="ui grid">
+                <div class="row">
+                    <div class="three wide column">
+                         <img class="rounded-circle article-img" src={{obj.avatar.url}}>
+                    </div>
+                    <div class="thirteen wide column">
+                        <h3>{{obj.user}}</h3>
+                        <br>
+                        <a href="{% url 'profiles:profile-detail-view' obj.slug %}">
+                            <button class="btn btn-outline-info">See profile</button>
+                        </a>
+                        <form action="{% url 'profiles:request-accept' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="profile_pk" value={{obj.pk}}>
+                            <button type="submit" class="btn btn-outline-info">
+                                <i class="check icon"></i>
+                                Accept invite
+                            </button>
+                        </form>
+                         <form action="{% url 'profiles:request-refuse' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="profile_pk" value={{obj.pk}}>
+                            <button type="submit" class="btn btn-danger">
+                                <i class="close icon"></i>
+                                Reject invite
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock content %}

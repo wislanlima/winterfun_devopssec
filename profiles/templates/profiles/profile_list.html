@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}
+all profiles
+{% endblock title %}
+
+{% block content %}
+
+    {% if is_empty %}
+        <h1>No profiles to interact with</h1>
+    {% endif %}
+
+    {% for obj in object_list %}
+        <div class="ui segment">
+            <div class="ui grid">
+                <div class="row">
+                    <div class="three wide column">
+                        <img class="rounded-circle article-img" src={{obj.avatar.url}}>
+                    </div>
+                    <div class="thirteen wide column">
+                        <h3>{{obj.user}}</h3>
+                        <p>{{obj.about_me}}</p>
+                        <a href={{obj.get_absolute_url}}><button class="btn btn-outline-info">See profile</button></a>
+                        <br>
+
+                        {% if obj.user not in rel_receiver and obj.user not in rel_sender %}
+                            <form action="{% url 'profiles:request-accept' %}" method="POST">
+                                {% csrf_token %}
+                                <input type="hidden" name="profile_pk" value={{obj.pk}}>
+                                <button type="submit" class="btn btn-outline-info"><i class="plus square icon"></i>Add to friends</button>
+                            </form>
+                         {% endif %}
+
+                        {% if obj.user in rel_receiver and request.user not in obj.friends.all %}
+                            <button class="btn danger"><i class="user icon"></i>Waiting for approval</button>
+                        {% endif %}
+
+                        {% if request.user in obj.friends.all %}
+                        <form action="{% url 'profiles:request-refuse' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="profile_pk" value={{obj.pk}}>
+                            <button type="submit" class="btn danger"><i class="minus square icon"></i>Remove from friends</button>
+                        </form>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+{% endfor %}
+
+        {% if is_paginated %}
+
+    {% if page_obj.has_previous %}
+    <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+    {% if page_obj.number == num %}
+    <div class="btn btn-info mb-4">{{ num }}</div>
+    {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
+    <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+
+    {% endif %}
+
+
+                </div>
+
+
+{% endblock content %}

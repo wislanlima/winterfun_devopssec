@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}
+all profiles
+{% endblock title %}
+
+{% block content %}
+
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <small class="mr-2" >Organizer: {{ object.user }}</small><br>
+          <small class="text-muted">Start date: {{ object.start }}</small><br>
+          <small class="text-muted">End Date: {{ object.end }}</small><br>
+        </div>
+
+
+        <div class="article-metadata">
+          <small class="mr-2" >Users invited: </small>
+            {% for obj_user in object.get_user  %}
+                {{ object.pkid }}
+                <small class="mr-2" >{{ obj_user.email }}</small>
+                <small class="mr-2" >{{ obj_user.pkid }}</small>
+                <small class="mr-2" >{{ obj_user.id }}</small>
+
+
+
+
+            {% endfor %}
+
+        </div>
+      Summary:
+        <h2>{{ object.summary }}</h2>
+      Description:
+        <p class="article-content">{{ object.description }}</p>
+      </div>
+    {% ifequal request.user object.user %}
+        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'events:event-delete-view' object.id %}">DELETE</a>
+        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'events:my-events' %}">My Events</a>
+        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'events:event-update-view' object.id %}">Edit Event</a>
+
+
+
+            {% if not object.added_to_google_calendar %}
+                <form action="{% url 'events:add-google-calendar' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="event_id" value={{object.id}}>
+                    <button type="submit" class="btn btn-secondary btn-sm mt-1 mb-1"><i class="plus square icon"></i>Add to Google Calendar</button>
+                </form>
+            {% else %}
+                <form action="{% url 'events:remove-google-calendar' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="event_id" value={{object.id}}>
+                    <button type="submit" class="btn btn-danger btn-sm mt-1 mb-1"><i class="plus square icon"></i>Remove from Google Calendar</button>
+                </form>
+            {% endif %}
+
+    {% endifequal %}
+
+    </article>
+
+
+
+
+
+{% endblock content %}
