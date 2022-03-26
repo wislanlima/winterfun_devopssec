@@ -14,8 +14,36 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
+
+from frontend.views import index
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+    path("", index, name="testeindex"),
+    #    path('', ProfileView.as_view(template_name='index.html'), name='index'),
+    path("admin/", admin.site.urls),
+    path("users/", include("users.urls")),
+    # path('index/', include('frontend.urls')),
+    path("profile/", include("profiles.urls")),
+    path("post/", include("posts.urls")),
+    path("frontend/", include("frontend.urls")),
+    path("booking/", include("booking.urls")),
+    path("event/", include("events.urls")),
+    path("api/v1/auth/", include("djoser.urls")),
+    path("api/v1/auth/", include("djoser.urls.jwt")),
+    # path('profile/', users_view.ProfileView.as_view(), name='profile-user'),
+    #    path('<username>/', UserProfile, name='profile'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns = [
+        path("__debug__/", include(debug_toolbar.urls)),
+    ] + urlpatterns
+
+admin.site.site_header = "Winter Fun Sports -  Admin"
+admin.site.site_title = "Winter Fun Sports Admin Portal"
+admin.site.index_title = "Welcome to the Winter Fun Sports Portal"

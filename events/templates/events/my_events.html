@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    {% for event in events %}
+
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="mr-2" >Organizer: {{ event.user }}</small><br>
+              <small class="text-muted">Start date: {{ event.start }}</small><br>
+              <small class="text-muted">End Date: {{ event.end }}</small><br>
+            </div>
+
+            <div class="article-metadata">
+              <small class="mr-2" >Users invited: </small>
+                {% for inveted in event.accounts.all %}
+                    <small class="mr-2" >{{ inveted }}</small>
+                    {% endfor %}
+
+            </div>
+          Summary:
+            <h2>{{ event.summary }}</h2>
+          Description:
+            <p class="article-content">{{ event.description }}</p>
+          </div>
+    {% ifequal request.user event.user %}
+        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'events:event-update-view' event.id %}">Edit Event</a>
+        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'events:event-delete-view' event.id %}">DELETE</a>
+    {% endifequal %}
+        </article>
+    {% endfor %}
+
+
+
+
+{% endblock content %}

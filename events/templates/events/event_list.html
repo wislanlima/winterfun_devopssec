@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}
+all profiles
+{% endblock title %}
+
+{% block content %}
+
+    {% if is_empty %}
+        <h1>No profiles to interact with</h1>
+    {% endif %}
+
+        {% for event in object_list %}
+
+
+
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="mr-2" >Organizer: {{ event.user }}</small><br>
+              <small class="text-muted">Start date: {{ event.start }}</small><br>
+              <small class="text-muted">End Date: {{ event.end }}</small><br>
+            </div>
+
+            <div class="article-metadata">
+              <small class="mr-2" >Users invited: </small>
+                {% for invited in event.get_status %}
+                    <div>
+                    <small class="mr-2" >{{ invited.status }}</small>
+                    <small class="mr-2" >{{ invited.receiver.pkid }}</small>
+                    <small class="mr-2" >{{ invited.receiver }}</small>
+                    <small class="mr-2" >{{ event.pkid }}</small>
+                {% ifequal request.user invited.receiver %}
+                <form action="{% url 'events:update-guest-status' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="event_pkid" value={{event.pkid}}>
+                    <input type="hidden" name="user_pkid" value={{invited.receiver.pkid}}>
+                         <label for="cars">Status:</label>
+                          <select name="status_id" id="cars">
+                            <option value="accepted">accepted</option>
+                            <option value="declined">declined</option>
+                          </select>
+
+                    <button type="submit" class="btn btn-secondary btn-sm mt-1 mb-1"><i class="plus square icon"></i>Trocar status</button>
+                </form>
+                {% endifequal %}
+
+                    </div>
+                    {% endfor %}
+
+            </div>
+          Summary:
+            <h2>{{ event.summary }}</h2>
+          Description:
+            <p class="article-content">{{ event.description }}</p>
+          </div>
+        {% ifequal request.user event.user %}
+            <a href={{event.get_absolute_url}}><button class="btn btn-outline-info">Edit Event</button></a>
+        {% endifequal %}
+        {{ event.get_accounts }}
+
+
+
+
+        </article>
+    {% endfor %}
+
+
+        {% if is_paginated %}
+
+    {% if page_obj.has_previous %}
+    <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+    {% if page_obj.number == num %}
+    <div class="btn btn-info mb-4">{{ num }}</div>
+    {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
+    <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+
+    {% endif %}
+
+
+                </div>
+
+
+{% endblock content %}
