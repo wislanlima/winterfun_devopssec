@@ -32,6 +32,9 @@ jobs:
           rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/sonarqube
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} "
           cd '/home/$USER_NAME/sonarqube'
+          rm private_key
+          docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
+          docker-compose -f docker-compose-sonarqube.yml up -d --build
           "
 
   Smoke-Test:
