@@ -25,6 +25,8 @@ RUN pip3 install --upgrade pip
 
 COPY ./requirements.txt /app/requirements.txt
 
+COPY ./winterfun/css/avatar.png /app/winterfun/css/avatar.png
+
 RUN pip3 install -r requirements.txt
 
 COPY ./_dockerfiles/local/django/entrypoint /entrypoint
