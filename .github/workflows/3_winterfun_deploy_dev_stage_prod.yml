@@ -45,24 +45,25 @@ jobs:
     runs-on: ubuntu-latest
     needs: Deploy
     steps:
-      - name: Coverage report artifacts
-      - uses: actions/upload-artifact@v1
-        with:
-          name: coverage report
-          path: output/coverage_report.txt
-      - name: Coverage report artifacts if failed
-        uses: actions/upload-artifact@v1
-        if: failure()
-        with:
-          name: coverage report if failed
-          path: output/coverage_report.txt
-      - name: Security check report artifacts
-        uses: actions/upload-artifact@v1
-        if: failure()
-        with:
-          name: bandit
-          path: output/security_report.txt
       - run: echo 'Smoke Tests not yet implemented.'
+#      - name: Coverage report artifacts
+#      - uses: actions/upload-artifact@v1
+#        with:
+#          name: coverage report
+#          path: output/coverage_report.txt
+#      - name: Coverage report artifacts if failed
+#        uses: actions/upload-artifact@v1
+#        if: failure()
+#        with:
+#          name: coverage report if failed
+#          path: output/coverage_report.txt
+#      - name: Security check report artifacts
+#        uses: actions/upload-artifact@v1
+#        if: failure()
+#        with:
+#          name: bandit
+#          path: output/security_report.txt
+
 
   Functional-Test:
     runs-on: ubuntu-latest
