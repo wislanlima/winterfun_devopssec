@@ -1,8 +1,8 @@
 FROM python:3.10.0-slim-buster
 
 ENV APP_HOME=/app
+ADD . /code/
 RUN mkdir $APP_HOME
-RUN mkdir $APP_HOME/staticfiles
 WORKDIR $APP_HOME
 
 LABEL decription="Development image for Winter Fun"
@@ -15,6 +15,8 @@ RUN apt-get update \
   && apt-get install -y build-essential \
   && apt-get install -y libpq-dev \
   && apt-get install -y gettext \
+  && apt-get install -y make \
+  && apt-get install -y nano \
   && apt-get -y install netcat gcc postgresql \
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && rm -rf /var/lib/apt/lists/*
