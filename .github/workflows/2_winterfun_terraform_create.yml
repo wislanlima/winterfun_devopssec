@@ -97,6 +97,6 @@ jobs:
       - name: Save SONARQUBE_IP
         uses: gliech/create-github-secret-action@v1
         with:
-            name: WINTERFUN_SONAQUBE
+            name: WINTERFUN_SONARQUBE
             value: ${{ steps.ip_outputs.outputs.sonarqube }}
             pa_token: ${{ secrets.GIT_HUB_TOKEN }}
