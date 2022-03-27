@@ -63,12 +63,15 @@ jobs:
             echo "::set-output name=stage::$(<stage.txt)"
             terraform output -raw winterfun_prod >> prod.txt
             echo "::set-output name=prod::$(<prod.txt)"
-          
+            terraform output -raw winterfun_sonarqube >> sonarqube.txt
+            echo "::set-output name=sonarqube::$(<sonarqube.txt)"
+
       - name: SHOW IPS
         run: |
            echo "DEV: $(<dev.txt)"
            echo "STAGE: $(<stage.txt)"
            echo "PROD: $(<prod.txt)"
+           echo "SONARQUBE: $(<sonarqube.txt)"
       
       - name: Save STAGE_IP
         uses: gliech/create-github-secret-action@v1
@@ -89,4 +92,11 @@ jobs:
         with:
             name: WINTERFUN_PROD_IP
             value: ${{ steps.ip_outputs.outputs.prod }}
+            pa_token: ${{ secrets.GIT_HUB_TOKEN }}
+
+      - name: Save SONARQUBE_IP
+        uses: gliech/create-github-secret-action@v1
+        with:
+            name: WINTERFUN_SONAQUBE
+            value: ${{ steps.ip_outputs.outputs.sonarqube }}
             pa_token: ${{ secrets.GIT_HUB_TOKEN }}
