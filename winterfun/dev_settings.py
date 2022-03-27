@@ -1,5 +1,8 @@
 from .base_settings import *
 
+# ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = ['44.193.75.39']
+
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = env("EMAIL_HOST")
 EMAIL_USE_TLS = True
