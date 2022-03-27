@@ -1,4 +1,4 @@
-name: "5 Deploy SonarQube: Winter Fun Dev only"
+name: "4 Deploy SonarQube: Winter Fun"
 
 on:
   workflow_dispatch:
