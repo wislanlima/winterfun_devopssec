@@ -38,7 +38,6 @@ services:
     restart: always
     ports:
       - 8086:8086
-      - 8088:8088
     environment:
       - INFLUXDB_ADMIN_USER_PASSWORD=pdgcloud_devopssec_pwd
       - INFLUXDB_ADMIN_USER_TOKEN=pdgcloud_devopssec_token
