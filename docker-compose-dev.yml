@@ -11,7 +11,7 @@ services:
       HOST_ADDRESS: postgres:5432
       DB_USER: DEVSECOPS
       DB_PASSWORD: PGDCLOUD
-      STATSD_HOST: 3.239.109.43
+      STATSD_HOST: 44.199.254.34
       TYPE: dev
     depends_on:
       - db
@@ -41,8 +41,6 @@ services:
     restart: always
     build:
       context: ./_dockerfiles/influxdb
-    ports:
-      - 8086:8086
     environment:
       - INFLUXDB_ADMIN_USER_PASSWORD=pdgcloud_devopssec_pwd
       - INFLUXDB_ADMIN_USER_TOKEN=pdgcloud_devopssec_token
@@ -65,7 +63,7 @@ services:
       - DOCKER_INFLUXDB_INIT_BUCKET=DEVOPSSEC_WEBAPP
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=pdgcloud_devopssec_token
       - DOCKER_INFLUXDB_INIT_ORG=NCIRL_PGDCLOUD_2022
-      - INFLUXDB_HOST=3.224.211.82
+      - INFLUXDB_HOST=44.199.254.34
     volumes:
       # Mount for telegraf configuration
       - ./_dockerfiles/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
