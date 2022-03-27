@@ -1,0 +1,50 @@
+name: "6 Deploy Elastic Search: Winter Fun"
+
+on:
+  workflow_dispatch:
+  # push:
+  #  branches: [ master ]
+    inputs:
+      environment_:
+        type: string
+        required: true
+        description: Environment [elk]
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Out Repo
+        uses: actions/checkout@v2
+
+      - name: Deploying Sonarqube in AWS EC2
+        env:
+            PRIVATE_KEY: ${{ secrets.AWS_PVT_KEY  }}
+            USER_NAME : ubuntu
+
+        run: |
+          if [ ${{ github.event.inputs.environment_ }} == 'elk' ]; then
+            HOSTNAME=${{ secrets.WINTERFUN_ELK_STACK  }}
+          fi
+
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/sonarqube
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} "
+          cd '/home/$USER_NAME/sonarqube'
+          rm private_key
+          docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
+          docker-compose -f docker-compose-elastic-search.yml up -d --build
+          "
+
+  Smoke-Test:
+    runs-on: ubuntu-latest
+    needs: Deploy
+    steps:
+      - run: echo 'Smoke Tests not yet implemented.'
+
+  Functional-Test:
+    runs-on: ubuntu-latest
+    needs: Smoke-Test
+    steps:
+      - run: echo 'Functional Tests not yet implemented.'
