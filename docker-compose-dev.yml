@@ -43,7 +43,7 @@ services:
       context: ./_dockerfiles/influxdb
     environment:
       - INFLUXDB_ADMIN_USER_PASSWORD=pdgcloud_devopssec_pwd
-      - INFLUXDB_ADMIN_USER_TOKEN=pdgcloud_devopssec_token
+      - INFLUXDB_ADMIN_USER_TOKEN=winterfun_token
     volumes:
       - influxdb:/bitnami/influxdb
     networks:
@@ -60,9 +60,9 @@ services:
     image: wislan/docker_winterfun:winterfun_telegraf
     environment:
       - HOSTNAME=pgdcloud-devopssec-telegraf
-      - DOCKER_INFLUXDB_INIT_BUCKET=DEVOPSSEC_WEBAPP
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=pdgcloud_devopssec_token
-      - DOCKER_INFLUXDB_INIT_ORG=NCIRL_PGDCLOUD_2022
+      - DOCKER_INFLUXDB_INIT_BUCKET=WINTERFUN_WEBAPP
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=winterfun_token
+      - DOCKER_INFLUXDB_INIT_ORG=WINTERFUN_2022
       - INFLUXDB_HOST=44.199.254.34
     volumes:
       # Mount for telegraf configuration
@@ -88,7 +88,7 @@ services:
       - ELASTICSEARCH_USERNAME=elastic
       - ELASTICSEARCH_PASSWORD=changeme
       - KIBANA_HOST=44.199.254.34
-      - ELASTIC_INDEX=ncirl-pgdcloud-devopssec
+      - ELASTIC_INDEX=winterfun-filebeat-main-server
     command: [ "--strict.perms=false" ]
     ulimits:
       memlock:
