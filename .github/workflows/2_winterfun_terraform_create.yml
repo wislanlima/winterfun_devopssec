@@ -65,6 +65,8 @@ jobs:
             echo "::set-output name=prod::$(<prod.txt)"
             terraform output -raw winterfun_sonarqube >> sonarqube.txt
             echo "::set-output name=sonarqube::$(<sonarqube.txt)"
+            terraform output -raw winterfun_elk_stack >> winterfun_elk_stack.txt
+            echo "::set-output name=elastic_search::$(<winterfun_elk_stack.txt)"
 
       - name: SHOW IPS
         run: |
@@ -72,7 +74,8 @@ jobs:
            echo "STAGE: $(<stage.txt)"
            echo "PROD: $(<prod.txt)"
            echo "SONARQUBE: $(<sonarqube.txt)"
-      
+           echo "SONARQUBE: $(<winterfun_elk_stack.txt)"
+
       - name: Save STAGE_IP
         uses: gliech/create-github-secret-action@v1
         with:
@@ -99,4 +102,11 @@ jobs:
         with:
             name: WINTERFUN_SONARQUBE
             value: ${{ steps.ip_outputs.outputs.sonarqube }}
+            pa_token: ${{ secrets.GIT_HUB_TOKEN }}
+
+      - name: Save ELASTIC_SEARCH_IP
+        uses: gliech/create-github-secret-action@v1
+        with:
+            name: WINTERFUN_ELASTIC_SEARCH_IP
+            value: ${{ steps.ip_outputs.outputs.elastic_search }}
             pa_token: ${{ secrets.GIT_HUB_TOKEN }}
