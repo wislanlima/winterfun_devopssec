@@ -31,7 +31,7 @@ services:
       - "5432:5432"
     networks:
       - winterfun_network
-      -
+
   influxdb:
     image: wislan/docker_winterfun:winterfun_influxdb
     container_name: influxdb
@@ -46,7 +46,7 @@ services:
       - influxdb:/bitnami/influxdb
     networks:
       - winterfun_network
-      -
+
   telegraf:
     # later versions of telegraf cannot be run as root.
     # see: https://www.influxdata.com/blog/docker-run-telegraf-as-non-root/
