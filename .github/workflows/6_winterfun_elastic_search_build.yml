@@ -8,7 +8,7 @@ on:
       environment_:
         type: string
         required: true
-        description: Environment [elk]
+        description: Environment [ELK]
 
 jobs:
   Deploy:
@@ -24,7 +24,7 @@ jobs:
             USER_NAME : ubuntu
 
         run: |
-          if [ ${{ github.event.inputs.environment_ }} == 'elk' ]; then
+          if [ ${{ github.event.inputs.environment_ }} == 'ELK' ]; then
             HOSTNAME=${{ secrets.WINTERFUN_ELK_STACK  }}
           fi
 
