@@ -1,7 +1,7 @@
 from .base_settings import *
 
 # ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
-ALLOWED_HOSTS = ['44.193.75.39']
+ALLOWED_HOSTS = ['44.199.254.34']
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = env("EMAIL_HOST")
