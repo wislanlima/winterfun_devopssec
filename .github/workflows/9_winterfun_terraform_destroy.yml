@@ -1,4 +1,4 @@
-name: "6 Destroy Infra: Winterfun"
+name: "9 Destroy Infra: Winterfun"
 
 on:
   workflow_dispatch

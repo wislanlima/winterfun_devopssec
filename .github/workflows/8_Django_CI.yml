@@ -1,4 +1,4 @@
-name: Django CI
+name: "8 Django CI: Winterfun"
 
 on:
   workflow_dispatch
