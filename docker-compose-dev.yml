@@ -84,10 +84,10 @@ services:
       - /var/lib/docker:/var/lib/docker:ro
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - ELASTICSEARCH_HOST=3.89.86.20
+      - ELASTICSEARCH_HOST=44.199.254.34
       - ELASTICSEARCH_USERNAME=elastic
       - ELASTICSEARCH_PASSWORD=changeme
-      - KIBANA_HOST=3.89.86.20
+      - KIBANA_HOST=44.199.254.34
       - ELASTIC_INDEX=ncirl-pgdcloud-devopssec
     command: [ "--strict.perms=false" ]
     ulimits:
