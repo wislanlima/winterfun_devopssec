@@ -14,6 +14,9 @@ services:
       - sonarqube_logs:/opt/sonarqube/logs
     ports:
       - "9000:9000"
+    networks:
+      - winterfun_network
+
   db:
     image: postgres:12
     environment:
@@ -22,6 +25,42 @@ services:
     volumes:
       - postgresql:/var/lib/postgresql
       - postgresql_data:/var/lib/postgresql/data
+    networks:
+      - winterfun_network
+
+  filebeat:
+    restart: always
+    user: root
+    container_name: filebeat
+    image: wislan/docker_winterfun:winterfun_filebeat
+    volumes:
+      - ./_dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - ELASTICSEARCH_HOST=100.26.242.218
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=changeme
+      - KIBANA_HOST=100.26.242.218
+      - ELASTIC_INDEX=ncirl-pgdcloud-devopssec
+    command: [ "--strict.perms=false" ]
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    stdin_open: true
+    tty: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "50"
+    networks:
+      - winterfun_network
+
+networks:
+    winterfun_network:
+        driver: bridge
 
 volumes:
   sonarqube_data:
