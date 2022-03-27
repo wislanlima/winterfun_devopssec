@@ -25,7 +25,7 @@ jobs:
 
         run: |
           if [ ${{ github.event.inputs.environment_ }} == 'ELK' ]; then
-            HOSTNAME=${{ secrets.WINTERFUN_ELK_STACK  }}
+            HOSTNAME=${{ secrets.WINTERFUN_ELASTIC_SEARCH_IP  }}
           fi
 
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
