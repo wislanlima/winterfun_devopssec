@@ -153,14 +153,14 @@ resource "aws_instance" "winterfun_sonarqube" {
 
   # copies file from local directory to remote directory
   provisioner "file" {
-    source      = "docker_compose_install.sh"
-    destination = "/tmp/docker_compose_install.sh"
+    source      = "docker_compose_install_sonarqube.sh"
+    destination = "/tmp/docker_compose_install_sonarqube.sh"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x /tmp/docker_compose_install.sh",
-      "/tmp/docker_compose_install.sh",
+      "chmod +x /tmp/docker_compose_install_sonarqube.sh",
+      "/tmp/docker_compose_install_sonarqube.sh",
     ]
   }
 }

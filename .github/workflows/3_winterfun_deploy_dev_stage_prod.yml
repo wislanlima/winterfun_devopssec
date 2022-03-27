@@ -38,7 +38,7 @@ jobs:
           cd '/home/$USER_NAME/aws_ec2_github_actions'
           rm private_key
           docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-          docker-compose -f docker-compose-sonarqube.yml up -d --build
+          docker-compose -f docker-compose.yml up -d --build
           "
 
   Smoke-Test:
