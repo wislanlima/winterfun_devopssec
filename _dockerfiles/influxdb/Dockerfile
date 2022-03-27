@@ -1,0 +1,1 @@
+FROM docker.io/bitnami/influxdb:2.1.1
