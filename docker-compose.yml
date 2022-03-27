@@ -45,6 +45,9 @@ services:
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=pdgcloud_devopssec_token
       - DOCKER_INFLUXDB_INIT_ORG=NCIRL_PGDCLOUD_2022
       - INFLUXDB_HOST=44.193.75.39
+    ports:
+      - "8086:8086"
+      - "8088:8088"
     volumes:
       # Mount for telegraf configuration
       - ./_dockerfiles/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
