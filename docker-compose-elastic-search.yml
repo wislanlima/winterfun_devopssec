@@ -51,7 +51,7 @@ services:
       - ELASTICSEARCH_USERNAME=elastic
       - ELASTICSEARCH_PASSWORD=changeme
       - KIBANA_HOST=100.26.242.218
-      - ELASTIC_INDEX=elastic-server-teste
+      - ELASTIC_INDEX=winterfun-elastic-search-server
     command: [ "--strict.perms=false" ]
     ulimits:
       memlock:
