@@ -12,6 +12,11 @@ services:
       DB_PASSWORD: PGDCLOUD
       STATSD_HOST: 44.199.254.34
       TYPE: dev
+      ELASTICSEARCH_HOST: 100.26.242.218
+      ELASTICSEARCH_USERNAME: elastic
+      ELASTICSEARCH_PASSWORD: changeme
+      KIBANA_HOST: 100.26.242.218
+      ELASTIC_INDEX: ncirl-pgdcloud-devopssec
     depends_on:
       - db
     entrypoint: /code/entrypoint.sh
@@ -142,7 +147,6 @@ services:
       - redis
     networks:
       - winterfun_network
-
 
 networks:
     winterfun_network:
