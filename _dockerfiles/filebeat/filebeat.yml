@@ -39,25 +39,25 @@ processors:
     netinfo.enabled: true
 
 #========================== Elasticsearch output ===============================
-output.elasticsearch:
-  hosts: ["${ELASTICSEARCH_HOST}:9200"]
-  username: ${ELASTICSEARCH_USERNAME}
-  password: ${ELASTICSEARCH_PASSWORD}
-  index: "${ELASTIC_INDEX}-%{+yyyy.MM.dd}"
+#output.elasticsearch:
+#  hosts: ["${ELASTICSEARCH_HOST}:9200"]
+#  username: ${ELASTICSEARCH_USERNAME}
+#  password: ${ELASTICSEARCH_PASSWORD}
+#  index: "${ELASTIC_INDEX}-%{+yyyy.MM.dd}"
 
 #============================== Dashboards =====================================
 setup.dashboards:
   enabled: true
 
 #============================== Kibana =========================================
-setup.kibana:
-  host: "${KIBANA_HOST}:5601"
-  username: ${ELASTICSEARCH_USERNAME}
-  password: ${ELASTICSEARCH_PASSWORD}
-
-setup.template:
-  name: ${ELASTIC_INDEX}
-  pattern: "${ELASTIC_INDEX}"
+#setup.kibana:
+#  host: "${KIBANA_HOST}:5601"
+#  username: ${ELASTICSEARCH_USERNAME}
+#  password: ${ELASTICSEARCH_PASSWORD}
+#
+#setup.template:
+#  name: ${ELASTIC_INDEX}
+#  pattern: "${ELASTIC_INDEX}"
 
 ##============================== Xpack Monitoring ===============================
 #xpack.monitoring:
