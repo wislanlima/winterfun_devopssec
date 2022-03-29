@@ -1,6 +1,5 @@
 from .base_settings import *
 
-
 # ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 if env("HOST_ENV") == 'STAGING':
     DEBUG = env("DEBUG")
@@ -19,7 +18,6 @@ SITE_NAME = "WinterFun"
 REDIS_URL = env("REDIS_URL")
 
 CACHES = {"default": {"BACKEND": "redis_cache.RedisCache", "LOCATION": REDIS_URL}}
-
 
 DATABASES = {
     "default": {
