@@ -25,7 +25,7 @@ RUN pip3 install --upgrade pip
 
 COPY ./requirements.txt /app/requirements.txt
 
-COPY ./winterfun/css/avatar.png /app/mediafiles/avatar.png
+COPY ./winterfun/templates/css/avatar.png /app/mediafiles/avatar.png
 
 RUN pip3 install -r requirements.txt
 
