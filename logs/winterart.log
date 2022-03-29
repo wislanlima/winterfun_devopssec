@@ -34123,3 +34123,47 @@ redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No c
 2022-03-29 18:53:09,088 django.request WARNING  Not Found: /mediafiles/user_1/avatar/john.JPG
 2022-03-29 18:56:00,492 django.utils.autoreload INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\dev_settings.py changed, reloading.
 2022-03-29 18:56:02,852 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-03-29 19:30:14,692 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-03-29 19:31:11,092 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-03-29 19:31:13,352 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: winterfun/templates/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\frontend\views.py", line 5, in index
+    return render(request, "frontend/index.html", {"login_url": "/accounts/login"})
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: winterfun/templates/base.html
+2022-03-29 19:31:50,340 django.utils.autoreload INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\base_settings.py changed, reloading.
+2022-03-29 19:31:53,051 django.utils.autoreload INFO     Watching for file changes with StatReloader
