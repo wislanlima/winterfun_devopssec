@@ -1,9 +1,8 @@
 from .base_settings import *
 
 
-
 # ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
-if env("HOST_ENV") == 'PRODUCTION':
+if env("HOST_ENV") == 'STAGING':
     DEBUG = env("DEBUG")
     ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 
