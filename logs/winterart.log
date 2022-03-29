@@ -34068,3 +34068,58 @@ AttributeError: 'User' object has no attribute 'user'
 2022-03-26 17:13:40,902 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-03-28 20:50:15,505 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-03-28 20:50:51,299 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-03-29 18:51:56,645 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-03-29 18:52:18,926 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-03-29 18:52:45,803 django.request ERROR    Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\views.py", line 119, in form_valid
+    login(self.request, user)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\contrib\auth\__init__.py", line 111, in login
+    request.session.cycle_key()
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 344, in cycle_key
+    self.create()
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 43, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 196, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 70, in exists
+    return bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\django\core\cache\backends\base.py", line 212, in __contains__
+    return self.has_key(key)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis_cache\backends\base.py", line 30, in wrapped
+    return method(self, client, key, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis_cache\backends\base.py", line 374, in has_key
+    return client.exists(key)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis\client.py", line 1581, in exists
+    return self.execute_command('EXISTS', *names)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\wislan\Documents\GitHub\winterfun\venv\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+2022-03-29 18:53:09,088 django.request WARNING  Not Found: /mediafiles/user_1/avatar/john.JPG
+2022-03-29 18:56:00,492 django.utils.autoreload INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\dev_settings.py changed, reloading.
+2022-03-29 18:56:02,852 django.utils.autoreload INFO     Watching for file changes with StatReloader

@@ -2,19 +2,25 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import environ
 from pathlib import Path
+import environ
+
 
 def main():
     """Run administrative tasks."""
     BASE_DIR = Path(__file__).resolve().parent.parent
     environ.Env.read_env(BASE_DIR / ".env")
-    if env("HOST_ENV") == 'PRODUCTION':
+    if os.environ.get('HOST_ENV') == 'PRODUCTION':
+        # print('prod settings')
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'winterfun.prod_settings')
-    elif env("HOST_ENV") == 'STAGING':
+    elif os.environ.get('HOST_ENV') == 'STAGING':
+        # print('staging settings')
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'winterfun.stage_settings')
     else:
+        # print('dev settings')
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'winterfun.dev_settings')
+
+
 
     try:
         from django.core.management import execute_from_command_line
