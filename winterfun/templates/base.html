@@ -50,8 +50,19 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Api Calls
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                        <a class="dropdown-item" href="{% url 'profiles:get_profile' %}">My Profile</a>
+                        <a class="dropdown-item" href="{% url 'profiles:BR-profile' %}">Profile from Brazil</a>
+                        <a class="dropdown-item" href="{% url 'get-user' %}">My User</a>
+                    </div>
+                  </li>
                   <a class="nav-item nav-link" href="{% url 'posts:new-post' %}">New Post </a>
-                <a class="nav-item nav-link" href="{% url 'posts:friend-post' %}">Friend Post </a>
+                  <a class="nav-item nav-link" href="{% url 'posts:friend-post' %}">Friend Post </a>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Users
@@ -103,17 +114,7 @@
                       </li>
 
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Api Calls
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                            <a class="dropdown-item" href="{% url 'profiles:get_profile' %}">My Profile</a>
-                            <a class="dropdown-item" href="{% url 'profiles:BR-profile' %}">Profile from Brazil</a>
-                            <a class="dropdown-item" href="{% url 'get-user' %}">My User</a>
-                        </div>
-                      </li>
 
                 {% endif %}
                   <a class="nav-item nav-link" href="{% url 'logout-user' %}">Logout</a>
