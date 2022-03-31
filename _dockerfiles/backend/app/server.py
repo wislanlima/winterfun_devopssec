@@ -44,4 +44,4 @@ app.include_router(users)
 
 @app.get("/")
 async def root():
-    return {"message": "**NCIRL PGDCLOUD DEVSECOPS  - Server is Up. Go to <ip_address>/docs to explore the API**"}
+    return {"message": "This is a test for the load balancing using the new Amazon account  - Server is Up. Go to <ip_address>/docs to explore the API**"}
