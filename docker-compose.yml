@@ -158,7 +158,7 @@ services:
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
     build:
-      context: ./_dockerfiles/nginx/Dockerfile
+      context: ./_dockerfiles/nginx
     ports:
       - "80:80"
     networks:
