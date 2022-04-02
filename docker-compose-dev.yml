@@ -140,9 +140,9 @@ services:
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
     expose:
-      - "443"
+      - "8080"
     ports:
-      - 443:443
+      - "8080:8080"
     env_file:
       - .env
     depends_on:
