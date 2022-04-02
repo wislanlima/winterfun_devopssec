@@ -16,6 +16,40 @@ services:
     networks:
       - winterfun_network
 
+  redis:
+    container_name: redis
+    build:
+      context: ./_dockerfiles/redis
+    image: wislan/docker_winterfun:winterfun_redis
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"
+    networks:
+      - winterfun_network
+
+  api:
+    build:
+        context: .
+        dockerfile: ./_dockerfiles/local/django/Dockerfile
+    image: wislan/docker_winterfun:winterfun_api
+    command: /start
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    networks:
+      - winterfun_network
+
   influxdb:
     container_name: influxdb
     restart: always
@@ -89,17 +123,7 @@ services:
     networks:
       - winterfun_network
 
-  redis:
-    container_name: redis
-    build:
-      context: ./_dockerfiles/redis
-    image: wislan/docker_winterfun:winterfun_redis
-    expose:
-      - "6379"
-    ports:
-      - "6379:6379"
-    networks:
-      - winterfun_network
+
 
   pgadmin:
     container_name: pgadmin
@@ -114,27 +138,7 @@ services:
     networks:
       - winterfun_network
 
-  api:
-    build:
-        context: .
-        dockerfile: ./_dockerfiles/local/django/Dockerfile
-    image: wislan/docker_winterfun:winterfun_api
-    command: /start
-    volumes:
-      - .:/app
-      - static_volume:/app/staticfiles
-      - media_volume:/app/mediafiles
-    expose:
-      - "8080"
-    ports:
-      - "8080:8080"
-    env_file:
-      - .env
-    depends_on:
-      - db
-      - redis
-    networks:
-      - winterfun_network
+
 
   nginx:
     build:
