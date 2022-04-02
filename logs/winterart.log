@@ -34169,3 +34169,4 @@ django.template.exceptions.TemplateDoesNotExist: winterfun/templates/base.html
 2022-03-29 19:31:53,051 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-02 18:36:07,999 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-02 18:36:51,725 django.request WARNING  Not Found: /favicon.ico
+2022-04-02 19:01:01,303 django.utils.autoreload INFO     Watching for file changes with StatReloader
