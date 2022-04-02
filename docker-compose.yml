@@ -116,7 +116,7 @@ services:
 
   api:
     container_name: api
-    image: wislan/docker_winterfun:winterfun_api
+    image: wislan/docker_winterfun:winterfun_redis
     command: /start
     volumes:
       - .:/app
