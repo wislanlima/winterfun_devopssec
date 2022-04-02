@@ -116,9 +116,7 @@ services:
 
   api:
     container_name: api
-    build:
-      context: .
-      dockerfile: ./_dockerfiles/local/django/Dockerfile
+    build: ./_dockerfiles/local/django
     image: wislan/docker_winterfun:winterfun_api
     command: /start
     volumes:
