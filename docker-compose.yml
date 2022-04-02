@@ -14,7 +14,38 @@ services:
     networks:
       - winterfun_network
 
+  redis:
+    container_name: redis
+    image: wislan/docker_winterfun:winterfun_redis
+    expose:
+      - "6379"
+    ports:
+      - "6379:6379"
+    networks:
+      - winterfun_network
 
+  api:
+    container_name: api
+    build:
+        context: .
+        dockerfile: ./_dockerfiles/local/django/Dockerfile
+    image: wislan/docker_winterfun:winterfun_api
+    command: /start
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    networks:
+      - winterfun_network
 
   influxdb:
     container_name: influxdb
@@ -30,8 +61,6 @@ services:
       - influxdb:/bitnami/influxdb
     networks:
       - winterfun_network
-
-
 
   telegraf:
     # later versions of telegraf cannot be run as root.
@@ -53,8 +82,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - winterfun_network
-
-
 
 
   filebeat:
@@ -87,20 +114,6 @@ services:
     networks:
       - winterfun_network
 
-
-
-  redis:
-    container_name: redis
-    image: wislan/docker_winterfun:winterfun_redis
-    expose:
-      - "6379"
-    ports:
-      - "6379:6379"
-    networks:
-      - winterfun_network
-
-
-
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
@@ -113,27 +126,6 @@ services:
       - "5051:80"
     networks:
       - winterfun_network
-
-  api:
-    container_name: api
-    image: wislan/docker_winterfun:winterfun_redis
-    command: /start
-    volumes:
-      - .:/app
-      - static_volume:/app/staticfiles
-      - media_volume:/app/mediafiles
-    expose:
-      - "8080"
-    ports:
-      - "8080:8080"
-    env_file:
-      - .env
-    depends_on:
-      - db
-      - redis
-    networks:
-      - winterfun_network
-
 
   nginx:
     build:

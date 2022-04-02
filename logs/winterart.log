@@ -34167,3 +34167,5 @@ Traceback (most recent call last):
 django.template.exceptions.TemplateDoesNotExist: winterfun/templates/base.html
 2022-03-29 19:31:50,340 django.utils.autoreload INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\base_settings.py changed, reloading.
 2022-03-29 19:31:53,051 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-02 18:36:07,999 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-02 18:36:51,725 django.request WARNING  Not Found: /favicon.ico
