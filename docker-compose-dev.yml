@@ -5,7 +5,7 @@ services:
     build: ./_dockerfiles/backend
     image: wislan/docker_winterfun:winterfun_backend
     ports:
-      - "80:5000"
+      - "8080:5000"
     environment:
       DATABASE: postgres
       HOST_ADDRESS: postgres:5432
@@ -148,6 +148,20 @@ services:
     depends_on:
       - db
       - redis
+    networks:
+      - winterfun_network
+
+  nginx:
+    restart: always
+    depends_on:
+      - api_django
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+    build:
+      context: ./_dockerfiles/nginx
+    ports:
+      - "80:80"
     networks:
       - winterfun_network
 
