@@ -142,12 +142,13 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          context: ./_dockerfiles/local/django
+          context: .
+          dockerfile: ./_dockerfiles/local/django/Dockerfile
           tags: wislan/docker_winterfun:winterfun_api
 
 
   PushComplete:
     runs-on: ubuntu-latest
-    needs: [Filebeat, Telegraf, Postgres, Redis, api]
+    needs: [Filebeat, Telegraf, Postgres, Redis, api, influxdb]
     steps:
       - run: echo 'End of Push'
