@@ -142,7 +142,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          context: ./
+          context: .
           dockerfile: ./_dockerfiles/local/django/Dockerfile
           tags: wislan/docker_winterfun:winterfun_api
 

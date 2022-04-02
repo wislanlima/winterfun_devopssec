@@ -1,7 +1,7 @@
 FROM python:3.10.0-slim-buster
 
 ENV APP_HOME=/app
-ADD . /app/
+
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
