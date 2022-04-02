@@ -138,10 +138,8 @@ services:
       - media_volume:/app/mediafiles
     expose:
       - "8080"
-      - "443"
     ports:
       - "8080:8080"
-      - "443:443"
     env_file:
       - .env
     depends_on:
