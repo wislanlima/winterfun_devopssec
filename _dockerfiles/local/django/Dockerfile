@@ -2,6 +2,7 @@ FROM python:3.10.0-slim-buster
 
 ENV APP_HOME=/app
 RUN mkdir $APP_HOME
+ADD . $APP_HOME/
 WORKDIR $APP_HOME
 
 LABEL decription="Development image for Winter Fun"
