@@ -1,28 +1,5 @@
 version: "3.8"
 services:
-  server:
-    container_name: api
-    image: wislan/docker_winterfun:winterfun_backend
-    ports:
-      - "8082:5000"
-    environment:
-      DATABASE: postgres
-      HOST_ADDRESS: postgres:5432
-      DB_USER: DEVSECOPS
-      DB_PASSWORD: PGDCLOUD
-      STATSD_HOST: 44.199.254.34
-      TYPE: dev
-      ELASTICSEARCH_HOST: 100.26.242.218
-      ELASTICSEARCH_USERNAME: elastic
-      ELASTICSEARCH_PASSWORD: changeme
-      KIBANA_HOST: 100.26.242.218
-      ELASTIC_INDEX: ncirl-pgdcloud-devopssec
-    depends_on:
-      - db
-    entrypoint: /code/entrypoint.sh
-    networks:
-      - winterfun_network
-    
   db:
     container_name: postgres
     image: wislan/docker_winterfun:winterfun_postgres
@@ -37,9 +14,11 @@ services:
     networks:
       - winterfun_network
 
+
+
   influxdb:
-    image: wislan/docker_winterfun:winterfun_influxdb
     container_name: influxdb
+    image: wislan/docker_winterfun:winterfun_influxdb
     restart: always
     environment:
       - INFLUXDB_ADMIN_USER_PASSWORD=pdgcloud_devopssec_pwd
@@ -52,12 +31,14 @@ services:
     networks:
       - winterfun_network
 
+
+
   telegraf:
     # later versions of telegraf cannot be run as root.
     # see: https://www.influxdata.com/blog/docker-run-telegraf-as-non-root/
+    container_name: telegraf
     user: root
     restart: always
-    container_name: telegraf
     image: wislan/docker_winterfun:winterfun_telegraf
     environment:
       - HOSTNAME=pgdcloud-devopssec-telegraf
@@ -73,10 +54,13 @@ services:
     networks:
       - winterfun_network
 
+
+
+
   filebeat:
+    container_name: filebeat
     restart: always
     user: root
-    container_name: filebeat
     image: wislan/docker_winterfun:winterfun_filebeat
     volumes:
       - ./_dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
@@ -103,6 +87,8 @@ services:
     networks:
       - winterfun_network
 
+
+
   redis:
     container_name: redis
     image: wislan/docker_winterfun:winterfun_redis
@@ -112,6 +98,8 @@ services:
       - "6379:6379"
     networks:
       - winterfun_network
+
+
 
   pgadmin:
     container_name: pgadmin
@@ -126,8 +114,8 @@ services:
     networks:
       - winterfun_network
 
-  api_django:
-    container_name: api_django
+  api:
+    container_name: api
     build:
       context: .
       dockerfile: ./_dockerfiles/local/django/Dockerfile
@@ -148,15 +136,16 @@ services:
     networks:
       - winterfun_network
 
+
   nginx:
+    build:
+      context: ./_dockerfiles/nginx
     restart: always
     depends_on:
-      - api_django
+      - api
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
-    build:
-      context: ./_dockerfiles/nginx
     ports:
       - "80:80"
     networks:
