@@ -51,6 +51,7 @@ def require_auth(function):
             return function(request, *args, **kwargs)
     return wrapper
 
+
 def oauth2callback(request):
     """
     This function is the call back function. There is a url(it was configured on the Calendar API) that is redirect from google back to the aplication with the user's token
