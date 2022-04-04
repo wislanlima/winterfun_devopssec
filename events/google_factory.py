@@ -3,37 +3,30 @@ import logging
 import googleapiclient
 from django.utils import timezone
 
-from winterfun.calendar_connection import get_calendar_service
-
-from winterfun.views import auth, require_auth
+from winterfun.calendar_connection import oauth2callback, require_auth
 
 logger = logging.getLogger(__name__)
 
 @require_auth
 def create_cal(instance):
-    print('here')
-    user = instance.user.username
-    print('timezone now?')
-    print(timezone.get_current_timezone())
-    print('##########')
+    """
+    This method check the wrap function if the user has a valid token from redis
+     if it doesnt, it creates a link for authentication with google
+     once the user has given permision to access the calendar, we have a valid token and we can call the command using the method build
+     We use an instance of the event that hold the same fields that we can use to update the event on google calendar.
+    Done!
+    """
+    # Get the authentication from the calendar_connection.py
+    service = oauth2callback(instance)
 
-    service = auth(instance)
-
+    # get the values from the current object
     start_value = instance.start
     start = start_value.isoformat()
     end_value = instance.end
     end = end_value.isoformat()
-    print(start_value)
-    print(start)
-    print('#############')
-    print(type(end_value))
-    print(type(end))
-    print('#############')
-
 
     list = []
     attendees = instance.accounts.all()
-    print(attendees)
     if attendees is not None:
         for guest in attendees:
             value = {
@@ -41,12 +34,7 @@ def create_cal(instance):
             }
             list.append(value)
 
-    # t = {"attendees": [{"email": "email@gmail.com"}, {"email": "email2@gmail.com"}]}
-    # print(t)
-    # print(list)
-    # print(start)
-    # print(end)
-    # print(end.x)
+    # Send the command to save the event on google
     event_result = service.events().insert(calendarId='primary',
                                            body={
                                                "summary": instance.summary,
@@ -59,13 +47,11 @@ def create_cal(instance):
                                            sendUpdates='all'
                                            ).execute()
 
-    print("created event")
-    print("id: ", event_result['id'])
-    print("summary: ", event_result['summary'])
-    print("starts at: ", event_result['start']['dateTime'])
-    print("ends at: ", event_result['end']['dateTime'])
-
-    print('################################')
+    # print("created event")
+    # print("id: ", event_result['id'])
+    # print("summary: ", event_result['summary'])
+    # print("starts at: ", event_result['start']['dateTime'])
+    # print("ends at: ", event_result['end']['dateTime'])
 
     logger.info(f"{instance}'s Deleting events from google calendar")
     return event_result
@@ -74,26 +60,21 @@ def create_cal(instance):
 @require_auth
 def update_google_event(instance, calendar_id):
     """
-    Updating the google calendar
+    This method uses the wrap function if the user has a valid token from redis
+     if it doesnt, it creates a link for authentication with google
+     once the user has given permision to access the calendar, we have a valid token and we can call the command using the method build
+     We use an instance of the event that to update the same fields that we can use to update the event on google calendar.
+    Done!
     """
 
     try:
-        print('here')
-        user = instance.user.username
-        print('timezone now?')
-        print(timezone.get_current_timezone())
-        print('##########')
+        service = oauth2callback(instance)
+
         start_value = instance.start
         start = start_value.isoformat()
         end_value = instance.end
         end = end_value.isoformat()
-        print(start_value)
-        print(start)
-        print('#############')
-        print(type(end_value))
-        print(type(end))
-        print('#############')
-        service = auth(instance)
+
 
         list = []
         attendees = instance.accounts.all()
@@ -104,11 +85,6 @@ def update_google_event(instance, calendar_id):
                     'email': guest.email
                 }
                 list.append(value)
-
-        start_value = instance.start
-        start = start_value.isoformat()
-        end_value = instance.end
-        end = end_value.isoformat()
 
         event_result = service.events().update(
             calendarId='primary',
@@ -122,11 +98,11 @@ def update_google_event(instance, calendar_id):
             },
         ).execute()
 
-        print("updated event")
-        print("id: ", event_result['id'])
-        print("summary: ", event_result['summary'])
-        print("starts at: ", event_result['start']['dateTime'])
-        print("ends at: ", event_result['end']['dateTime'])
+        # print("updated event")
+        # print("id: ", event_result['id'])
+        # print("summary: ", event_result['summary'])
+        # print("starts at: ", event_result['start']['dateTime'])
+        # print("ends at: ", event_result['end']['dateTime'])
         logger.info(f"{instance}'s a Calendar was added into you google calendar")
     except googleapiclient.errors.HttpError:
         print("Failed to delete event")
@@ -134,11 +110,16 @@ def update_google_event(instance, calendar_id):
 @require_auth
 def update_google_event_status(instance, calendar_id, email, status):
     """
-    Updating the google calendar
+    This method uses the wrap function if the user has a valid token from redis
+     if it doesnt, it creates a link for authentication with google
+     once the user has given permision to access the calendar, we have a valid token and we can call the command using the method build
+
+     We update the reply from the user with the status of refusing or accepting the meeting
+    Done!
     """
     try:
-        user = instance.user.username
-        service = auth(instance)
+
+        service = oauth2callback(instance)
         list_list = [{'email': email,
                       'responseStatus': status,
                       }]
@@ -155,9 +136,16 @@ def update_google_event_status(instance, calendar_id, email, status):
 
 @require_auth
 def delete_google_event(instance, calendar_id):
-    # Delete the event
-    user = instance.user.username
-    service = auth(instance)
+    """
+    This method uses the wrap function if the user has a valid token from redis
+     if it doesnt, it creates a link for authentication with google
+     once the user has given permision to access the calendar, we have a valid token and we can call the command using the method build
+
+    The owner of the meeting can delete from google calendar
+    Done!
+    """
+
+    service = oauth2callback(instance)
     try:
         service.events().delete(
             calendarId='primary',

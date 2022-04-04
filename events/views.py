@@ -15,7 +15,7 @@ from django.views.generic import ListView, DetailView, UpdateView, CreateView, D
 from events.forms import EventModelForm
 from events.google_factory import create_cal, update_google_event, delete_google_event, update_google_event_status
 from events.models import Event, CalendarEvent, Relationship
-from winterfun.views import require_auth
+from winterfun.calendar_connection import require_auth
 
 User = get_user_model()
 logger = logging.getLogger(__name__)
@@ -119,7 +119,6 @@ class EventUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):  # L
         # print("url")
         return reverse("events:event-detail-view", kwargs={"id": self.kwargs.get('id')})
 
-
     def form_valid(self, form):
         response = super(EventUpdateView, self).form_valid(form)
         """Update a google calendar"""
@@ -179,6 +178,7 @@ def add_google_calendar(request):
             print(str(e))
         return redirect(request.META.get("HTTP_REFERER"))
     return reverse("events:event-detail-view", kwargs={"id": instance.id})
+
 
 @require_auth
 @login_required

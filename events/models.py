@@ -6,7 +6,6 @@ from django.db.models import Q
 from django.urls import reverse
 
 from profiles.models import Profile
-from winterfun.calendar_connection import get_calendar_service
 from winterfun.models import WinterModel
 from django.utils.translation import ugettext_lazy as _
 from django.core.exceptions import ValidationError
