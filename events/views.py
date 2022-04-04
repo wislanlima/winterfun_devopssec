@@ -15,6 +15,7 @@ from django.views.generic import ListView, DetailView, UpdateView, CreateView, D
 from events.forms import EventModelForm
 from events.google_factory import create_cal, update_google_event, delete_google_event, update_google_event_status
 from events.models import Event, CalendarEvent, Relationship
+from winterfun.calendar_connection import require_auth
 
 User = get_user_model()
 logger = logging.getLogger(__name__)
@@ -64,6 +65,7 @@ class EventListView(LoginRequiredMixin, ListView):
     ordering = '-created_at'
 
     """apagar os dois methods de baixo, era so para enteder obj e queryset"""
+
     def get_context_data(self, **kwargs):
         context = super(EventListView, self).get_context_data(**kwargs)
         # Create any data and add it to the context
@@ -72,8 +74,9 @@ class EventListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self, *args, **kwargs):
         obj = super(EventListView, self).get_queryset(*args, **kwargs)
-        #print(obj)
+        # print(obj)
         return obj
+
 
 class EventDetailView(LoginRequiredMixin, DetailView):
     """
@@ -146,6 +149,8 @@ class EventUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):  # L
     #         raise Http404
     #     return obj
 
+
+@require_auth
 @login_required
 def add_google_calendar(request):
     """
@@ -175,6 +180,7 @@ def add_google_calendar(request):
     return reverse("events:event-detail-view", kwargs={"id": instance.id})
 
 
+@require_auth
 @login_required
 def remove_google_calendar(request):
     """
@@ -203,6 +209,7 @@ def remove_google_calendar(request):
         return redirect(request.META.get("HTTP_REFERER"))
     return reverse("events:event-detail-view", kwargs={"id": instance.id})
 
+
 @login_required
 def update_guest_status(request):
     """
@@ -227,7 +234,6 @@ def update_guest_status(request):
             print("nao functionou")
         return redirect(request.META.get("HTTP_REFERER"))
     return reverse("events:event-detail-view", kwargs={"id": instance.id})
-
 
 
 class EventDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, DeleteView):
@@ -268,6 +274,7 @@ class EventDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMix
         messages.warning(self.request, 'You need to be the author of the event in order to delete it')
         return False
 
+
 #
 # def create_event(request):
 #     if request.method == 'POST':
@@ -278,9 +285,6 @@ class EventDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMix
 #     else:
 #         form = EventModelForm()
 #     return render(request, 'events/home.html', {'form': form})
-
-
-
 
 
 def my_events(request):
@@ -297,10 +301,5 @@ def my_events(request):
     return render(request, "events/my_events.html", context)
 
 
-
 def guests(users):
-
-
     return redirect("profiles:my-profile")
-
-

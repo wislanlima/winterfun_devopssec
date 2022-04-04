@@ -19,18 +19,21 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from frontend.views import index
+from winterfun.calendar_connection import oauth2callback
 
+#TODO AQUI ONDE PARO O CTRZ
 urlpatterns = [
     path("", index, name="testeindex"),
-    #    path('', ProfileView.as_view(template_name='index.html'), name='index'),
+    path("oauth2callback/", oauth2callback, name="oauth2callback"),
+
     path("admin/", admin.site.urls),
     path("users/", include("users.urls")),
     # path('index/', include('frontend.urls')),
     path("profile/", include("profiles.urls")),
     path("post/", include("posts.urls")),
     path("frontend/", include("frontend.urls")),
-    path("booking/", include("booking.urls")),
     path("event/", include("events.urls")),
+
     path("api/v1/auth/", include("djoser.urls")),
     path("api/v1/auth/", include("djoser.urls.jwt")),
     # path('profile/', users_view.ProfileView.as_view(), name='profile-user'),

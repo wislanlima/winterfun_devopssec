@@ -10,7 +10,7 @@ from django.dispatch import receiver
 from events.google_factory import create_cal, update_google_event
 from events.models import CalendarEvent, Event, Relationship
 from winterfun.base_settings import AUTH_USER_MODEL
-from winterfun.calendar_connection import get_calendar_service
+
 
 logger = logging.getLogger(__name__)
 

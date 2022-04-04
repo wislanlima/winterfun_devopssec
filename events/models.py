@@ -6,7 +6,6 @@ from django.db.models import Q
 from django.urls import reverse
 
 from profiles.models import Profile
-from winterfun.calendar_connection import get_calendar_service
 from winterfun.models import WinterModel
 from django.utils.translation import ugettext_lazy as _
 from django.core.exceptions import ValidationError
@@ -85,15 +84,6 @@ class Event(WinterModel):
 
     def clean(self):
         # Check oauth2 info of sender
-        print('This is clean, why do I do this?')
-        print(self.user)
-        print(self.user.username)
-        print('####fim clean####')
-        service = get_calendar_service(self.user.username)
-        if not service:
-            raise ValidationError(
-                {'sender': ['This sender don\'t include OAuth2 client id. Please add it into this sender.']})
-        # Check credentials
         start_date = self.start
         end_date = self.end
         if end_date < start_date:

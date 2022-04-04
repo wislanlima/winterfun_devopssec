@@ -34170,3 +34170,583 @@ django.template.exceptions.TemplateDoesNotExist: winterfun/templates/base.html
 2022-04-02 18:36:07,999 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-02 18:36:51,725 django.request WARNING  Not Found: /favicon.ico
 2022-04-02 19:01:01,303 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 18:38:57,497 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 18:50:46,901 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 18:51:08,276 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 18:52:54,482 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 18:53:14,293 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 18:53:30,223 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 18:53:30,815 events.google_factory INFO     davenagel00@gmail.com: fasd: 234: 's Deleting events from google calendar
+2022-04-04 18:53:30,932 events.views INFO     davenagel00@gmail.com: fasd: 234: 's saved and google calendar saved
+2022-04-04 18:53:35,535 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 18:53:35,987 events.google_factory INFO     davenagel00@gmail.com: fasd: 234: 's Deleting events from google calendar = 7l349d2pt26b6up4rhmcvencug
+2022-04-04 18:53:36,058 events.views INFO     davenagel00@gmail.com: fasd: 234: 's The google calendar was removed?
+2022-04-04 18:53:40,487 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 18:53:41,035 events.google_factory INFO     davenagel00@gmail.com: fasd: 234: 's Deleting events from google calendar
+2022-04-04 18:53:41,192 events.views INFO     davenagel00@gmail.com: fasd: 234: 's saved and google calendar saved
+2022-04-04 18:55:03,146 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 18:55:04,437 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 18:55:13,813 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 18:55:14,261 events.google_factory INFO     davenagel00@gmail.com: fasd: 234: 's Deleting events from google calendar = c7ifk7gq2gko81opafls226o0k
+2022-04-04 18:55:14,325 events.views INFO     davenagel00@gmail.com: fasd: 234: 's The google calendar was removed?
+2022-04-04 18:55:18,496 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 18:55:19,171 events.google_factory INFO     davenagel00@gmail.com: fasd: 234: 's Deleting events from google calendar
+2022-04-04 18:55:19,259 events.views INFO     davenagel00@gmail.com: fasd: 234: 's saved and google calendar saved
+2022-04-04 18:55:23,740 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 18:55:24,262 events.google_factory INFO     davenagel00@gmail.com: fasd: 234: 's Deleting events from google calendar = rgkt6v65de0tj3vof7a9l4v6fg
+2022-04-04 18:55:24,331 events.views INFO     davenagel00@gmail.com: fasd: 234: 's The google calendar was removed?
+2022-04-04 19:01:00,761 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:01:00,899 events.views INFO     davenagel00@gmail.com: aaaaaaaaa: 235: 's saved and google calendar saved
+2022-04-04 19:01:04,485 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:01:05,065 events.google_factory INFO     davenagel00@gmail.com: aaaaaaaaa: 235: 's Deleting events from google calendar
+2022-04-04 19:01:05,193 events.views INFO     davenagel00@gmail.com: aaaaaaaaa: 235: 's saved and google calendar saved
+2022-04-04 19:01:21,053 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:01:21,225 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:01:21,680 events.google_factory INFO     davenagel00@gmail.com: bbbbbbbbbbbbbb: 235: 's a Calendar was added into you google calendar
+2022-04-04 19:01:21,680 events.views INFO     davenagel00@gmail.com: bbbbbbbbbbbbbb: 235: 's updating events and reseding emails if necessary
+2022-04-04 19:04:55,800 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:04:56,002 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:04:56,470 events.google_factory INFO     davenagel00@gmail.com: bbbbbbbbbbbbbb: 235: 's a Calendar was added into you google calendar
+2022-04-04 19:04:56,470 events.views INFO     davenagel00@gmail.com: bbbbbbbbbbbbbb: 235: 's updating events and reseding emails if necessary
+2022-04-04 19:09:37,365 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:09:38,671 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:09:53,401 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:09:53,919 events.google_factory INFO     davenagel00@gmail.com: bbbbbbbbbbbbbb: 235: 's Deleting events from google calendar = 0c49jullritv6fap6jp97m268s
+2022-04-04 19:09:53,964 events.views INFO     davenagel00@gmail.com: bbbbbbbbbbbbbb: 235: 's The google calendar was removed?
+2022-04-04 19:09:56,213 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:09:56,782 events.google_factory INFO     davenagel00@gmail.com: bbbbbbbbbbbbbb: 235: 's Deleting events from google calendar
+2022-04-04 19:09:56,930 events.views INFO     davenagel00@gmail.com: bbbbbbbbbbbbbb: 235: 's saved and google calendar saved
+2022-04-04 19:10:05,503 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:10:05,751 django.request ERROR    Internal Server Error: /event/update/5982d7b2-4fdc-4acc-8c3b-2d0a155f6ac3/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 128, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 194, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 130, in form_valid
+    update_google_event(instance, calendar_google_id)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 46, in wrapper
+    return function(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\google_factory.py", line 70, in update_google_event
+    service = auth(instance)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 74, in auth
+    messages = request.session.get('messages', {})
+AttributeError: 'Event' object has no attribute 'session'
+2022-04-04 19:10:35,791 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:10:35,938 events.views INFO     davenagel00@gmail.com: a: 236: 's saved and google calendar saved
+2022-04-04 19:10:39,348 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:10:39,888 events.google_factory INFO     davenagel00@gmail.com: a: 236: 's Deleting events from google calendar
+2022-04-04 19:10:40,043 events.views INFO     davenagel00@gmail.com: a: 236: 's saved and google calendar saved
+2022-04-04 19:10:52,156 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:10:52,392 django.request ERROR    Internal Server Error: /event/update/d0e00463-c2ab-4b69-8a5b-8af5349e4951/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 128, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 194, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 130, in form_valid
+    update_google_event(instance, calendar_google_id)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 46, in wrapper
+    return function(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\google_factory.py", line 70, in update_google_event
+    service = auth(instance)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 74, in auth
+    messages = request.session.get('messages', {})
+AttributeError: 'Event' object has no attribute 'session'
+2022-04-04 19:11:20,359 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:11:20,529 django.request ERROR    Internal Server Error: /event/update/d0e00463-c2ab-4b69-8a5b-8af5349e4951/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 128, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 194, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 130, in form_valid
+    update_google_event(instance, calendar_google_id)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 46, in wrapper
+    return function(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\google_factory.py", line 70, in update_google_event
+    service = auth(instance)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 74, in auth
+AttributeError: 'Event' object has no attribute 'session'
+2022-04-04 19:11:27,924 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:11:29,144 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:11:45,461 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:11:45,724 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:11:45,934 events.views INFO     davenagel00@gmail.com: a: 236: 's updating events and reseding emails if necessary
+2022-04-04 19:12:48,367 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:12:48,567 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:12:48,876 events.views INFO     davenagel00@gmail.com: a: 236: 's updating events and reseding emails if necessary
+2022-04-04 19:33:10,754 django.request WARNING  Not Found: /favicon.ico
+2022-04-04 19:34:04,615 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:34:05,882 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:35:40,916 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:36:01,940 events.views INFO     wislan.lima@gmail.com: adfa: 237: 's saved and google calendar saved
+2022-04-04 19:36:47,029 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:36:57,983 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:37:26,885 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:38:19,682 events.views INFO     davenagel00@gmail.com: bb: 238: 's saved and google calendar saved
+2022-04-04 19:39:34,875 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:40:21,855 events.views INFO     davenagel00@gmail.com: ab: 239: 's saved and google calendar saved
+2022-04-04 19:42:25,089 django.request WARNING  Not Found: /wislan/
+2022-04-04 19:43:34,587 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:44:38,954 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:45:26,382 django.request WARNING  Not Found: /favicon.ico
+2022-04-04 19:47:29,928 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:48:06,909 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:48:27,402 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:49:19,797 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:49:20,249 events.google_factory INFO     davenagel00@gmail.com: ab: 239: 's Deleting events from google calendar
+2022-04-04 19:49:20,423 events.views INFO     davenagel00@gmail.com: ab: 239: 's saved and google calendar saved
+2022-04-04 19:49:34,399 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:49:34,964 events.google_factory INFO     davenagel00@gmail.com: ab: 239: 's a Calendar was added into you google calendar
+2022-04-04 19:49:34,964 events.views INFO     davenagel00@gmail.com: ab: 239: 's updating events and reseding emails if necessary
+2022-04-04 19:50:15,656 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:50:16,261 events.google_factory INFO     davenagel00@gmail.com: ab: 239: 's Deleting events from google calendar = p5jpj50vn50r0jdac02sk0jecg
+2022-04-04 19:50:16,313 events.views INFO     davenagel00@gmail.com: ab: 239: 's The google calendar was removed?
+2022-04-04 19:50:20,825 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 19:50:21,356 events.google_factory INFO     davenagel00@gmail.com: ab: 239: 's Deleting events from google calendar
+2022-04-04 19:50:21,510 events.views INFO     davenagel00@gmail.com: ab: 239: 's saved and google calendar saved
+2022-04-04 19:52:01,479 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:52:19,799 django.request ERROR    Internal Server Error: /event/create/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 46, in post
+    return self.form_invalid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 61, in form_invalid
+    return self.render_to_response(self.get_context_data(form=form))
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 67, in get_context_data
+    return super().get_context_data(**kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\detail.py", line 94, in get_context_data
+    if self.object:
+AttributeError: 'EventCreateView' object has no attribute 'object'
+2022-04-04 19:56:50,344 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:57:28,697 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 19:58:48,321 events.views INFO     davenagel00@gmail.com: a: 240: 's saved and google calendar saved
+2022-04-04 19:59:20,545 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:00:49,959 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:01:19,027 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:02:29,668 events.views INFO     davenagel00@gmail.com: a: 241: 's saved and google calendar saved
+2022-04-04 20:02:31,812 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:04:57,130 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:05:14,263 events.views INFO     davenagel00@gmail.com: a: 241: 's updating events and reseding emails if necessary
+2022-04-04 20:05:21,938 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:05:22,475 events.google_factory INFO     davenagel00@gmail.com: a: 241: 's Deleting events from google calendar
+2022-04-04 20:05:22,619 events.views INFO     davenagel00@gmail.com: a: 241: 's saved and google calendar saved
+2022-04-04 20:06:33,185 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:06:33,430 events.views INFO     davenagel00@gmail.com: a: 241: 's updating events and reseding emails if necessary
+2022-04-04 20:07:03,577 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:07:04,138 events.google_factory INFO     davenagel00@gmail.com: a: 241: 's Deleting events from google calendar = 5q48kksj6j3cpecvk4i4i0his8
+2022-04-04 20:07:04,209 events.views INFO     davenagel00@gmail.com: a: 241: 's The google calendar was removed?
+2022-04-04 20:07:13,840 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:07:14,424 events.google_factory INFO     davenagel00@gmail.com: a: 241: 's Deleting events from google calendar
+2022-04-04 20:07:14,550 events.views INFO     davenagel00@gmail.com: a: 241: 's saved and google calendar saved
+2022-04-04 20:07:40,918 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:07:41,190 events.views INFO     davenagel00@gmail.com: fdsaf: 241: 's updating events and reseding emails if necessary
+2022-04-04 20:08:30,713 events.views INFO     wislan.lima@gmail.com: aaaaaaaaaaaaaa: 242: 's saved and google calendar saved
+2022-04-04 20:08:40,881 django.security.csrf WARNING  Forbidden (CSRF token missing or incorrect.): /event/add_calendar/
+2022-04-04 20:11:00,537 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:11:17,287 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:11:26,237 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:11:26,882 events.google_factory INFO     wislan.lima@gmail.com: aaaaaaaaaaaaaa: 242: 's Deleting events from google calendar
+2022-04-04 20:11:27,021 events.views INFO     wislan.lima@gmail.com: aaaaaaaaaaaaaa: 242: 's saved and google calendar saved
+2022-04-04 20:15:34,643 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:15:42,183 django.request ERROR    Internal Server Error: /event/update/ab8ef538-939f-4ec5-8cb8-11de40f756de/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 28, in wrapper
+    user = request.user
+AttributeError: 'EventUpdateView' object has no attribute 'user'
+2022-04-04 20:18:44,438 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:19:17,392 django.request ERROR    Internal Server Error: /event/update/ab8ef538-939f-4ec5-8cb8-11de40f756de/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 124, in dispatch
+    obj = super(EventUpdateView, self).dispatch(*args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 128, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 194, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 28, in wrapper
+    user = request.user
+AttributeError: 'EventUpdateView' object has no attribute 'user'
+2022-04-04 20:21:06,846 django.request ERROR    Internal Server Error: /event/update/ab8ef538-939f-4ec5-8cb8-11de40f756de/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 124, in dispatch
+    obj = super(EventUpdateView, self).dispatch(*args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 128, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 194, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 28, in wrapper
+    user = request.user
+AttributeError: 'EventUpdateView' object has no attribute 'user'
+2022-04-04 20:21:21,604 django.request ERROR    Internal Server Error: /event/update/ab8ef538-939f-4ec5-8cb8-11de40f756de/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 124, in dispatch
+    response = super(EventUpdateView, self).form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 128, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 194, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\winterfun\views.py", line 28, in wrapper
+    user = request.user
+AttributeError: 'EventUpdateView' object has no attribute 'user'
+2022-04-04 20:21:27,367 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:21:41,196 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:21:41,785 events.google_factory INFO     wislan.lima@gmail.com: aaaaaaaaaaaaaa: 242: 's a Calendar was added into you google calendar
+2022-04-04 20:21:41,785 events.views INFO     wislan.lima@gmail.com: aaaaaaaaaaaaaa: 242: 's updating events and reseding emails if necessary
+2022-04-04 20:21:55,495 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:21:55,725 events.google_factory INFO     wislan.lima@gmail.com: v: 242: 's a Calendar was added into you google calendar
+2022-04-04 20:21:55,725 events.views INFO     wislan.lima@gmail.com: v: 242: 's updating events and reseding emails if necessary
+2022-04-04 20:22:37,968 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:22:38,451 events.google_factory INFO     wislan.lima@gmail.com: v: 242: 's Deleting events from google calendar = n0mep6mg1pgqd0g5ogocqspsns
+2022-04-04 20:22:38,530 events.views INFO     wislan.lima@gmail.com: v: 242: 's The google calendar was removed?
+2022-04-04 20:22:46,270 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:22:46,730 events.google_factory INFO     wislan.lima@gmail.com: v: 242: 's Deleting events from google calendar
+2022-04-04 20:22:46,906 events.views INFO     wislan.lima@gmail.com: v: 242: 's saved and google calendar saved
+2022-04-04 20:22:58,667 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:22:59,195 events.google_factory INFO     wislan.lima@gmail.com: v: 242: 's Deleting events from google calendar = skc7n929q94bm0eg1k78iqpre4
+2022-04-04 20:22:59,268 events.views INFO     wislan.lima@gmail.com: v: 242: 's The google calendar was removed?
+2022-04-04 20:23:04,261 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:23:04,769 events.google_factory INFO     wislan.lima@gmail.com: v: 242: 's Deleting events from google calendar
+2022-04-04 20:23:04,869 events.views INFO     wislan.lima@gmail.com: v: 242: 's saved and google calendar saved
+2022-04-04 20:23:46,586 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:23:47,175 events.google_factory INFO     wislan.lima@gmail.com: aaaaa: 242: 's a Calendar was added into you google calendar
+2022-04-04 20:23:47,175 events.views INFO     wislan.lima@gmail.com: aaaaa: 242: 's updating events and reseding emails if necessary
+2022-04-04 20:24:55,892 events.views INFO     wislan.lima@gmail.com: Create: 243: 's saved and google calendar saved
+2022-04-04 20:25:02,964 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:25:03,409 events.google_factory INFO     wislan.lima@gmail.com: Create: 243: 's Deleting events from google calendar
+2022-04-04 20:25:03,507 events.views INFO     wislan.lima@gmail.com: Create: 243: 's saved and google calendar saved
+2022-04-04 20:27:34,361 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:27:54,659 events.views INFO     wislan.lima@gmail.com: q: 244: 's saved and google calendar saved
+2022-04-04 20:27:56,613 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:27:57,031 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's Deleting events from google calendar
+2022-04-04 20:27:57,144 events.views INFO     wislan.lima@gmail.com: q: 244: 's saved and google calendar saved
+2022-04-04 20:34:55,106 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:36:46,425 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:36:56,803 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:36:57,302 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's Deleting events from google calendar = crg4f59ajgrj9aggu6gnv7dloc
+2022-04-04 20:36:57,372 events.views INFO     wislan.lima@gmail.com: q: 244: 's The google calendar was removed?
+2022-04-04 20:36:59,966 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:37:00,484 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's Deleting events from google calendar
+2022-04-04 20:37:00,615 events.views INFO     wislan.lima@gmail.com: q: 244: 's saved and google calendar saved
+2022-04-04 20:38:00,301 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:41:14,970 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:41:26,017 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:41:26,523 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's a Calendar was added into you google calendar
+2022-04-04 20:41:26,524 events.views INFO     wislan.lima@gmail.com: q: 244: 's updating events and reseding emails if necessary
+2022-04-04 20:41:46,814 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:41:47,277 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's a Calendar was added into you google calendar
+2022-04-04 20:41:47,277 events.views INFO     wislan.lima@gmail.com: q: 244: 's updating events and reseding emails if necessary
+2022-04-04 20:45:12,478 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:45:13,013 events.google_factory INFO     wislan.lima@gmail.com: Create: 243: 's a Calendar was added into you google calendar
+2022-04-04 20:45:13,013 events.views INFO     wislan.lima@gmail.com: Create: 243: 's updating events and reseding emails if necessary
+2022-04-04 20:46:26,222 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:46:34,165 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:46:34,810 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's Deleting events from google calendar = a31ghaj4oeqoeo3pjid7hn93dg
+2022-04-04 20:46:34,853 events.views INFO     wislan.lima@gmail.com: q: 244: 's The google calendar was removed?
+2022-04-04 20:46:40,989 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:46:41,546 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's Deleting events from google calendar
+2022-04-04 20:46:41,710 events.views INFO     wislan.lima@gmail.com: q: 244: 's saved and google calendar saved
+2022-04-04 20:47:08,819 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:47:09,270 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's Deleting events from google calendar = 0fsmbvfi5eaaaddc9ncb9n44cc
+2022-04-04 20:47:09,349 events.views INFO     wislan.lima@gmail.com: q: 244: 's The google calendar was removed?
+2022-04-04 20:47:45,910 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:47:50,868 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:47:51,453 events.google_factory INFO     wislan.lima@gmail.com: q: 244: 's Deleting events from google calendar
+2022-04-04 20:47:51,598 events.views INFO     wislan.lima@gmail.com: q: 244: 's saved and google calendar saved
+2022-04-04 20:49:59,321 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 20:51:23,728 events.views INFO     wislan.lima@gmail.com: 123: 245: 's saved and google calendar saved
+2022-04-04 20:51:29,437 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 20:51:30,007 events.google_factory INFO     wislan.lima@gmail.com: 123: 245: 's Deleting events from google calendar
+2022-04-04 20:51:30,143 events.views INFO     wislan.lima@gmail.com: 123: 245: 's saved and google calendar saved
+2022-04-04 21:05:52,417 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 21:06:48,718 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:06:49,213 events.google_factory INFO     wislan.lima@gmail.com: 123: 245: 's a Calendar was added into you google calendar
+2022-04-04 21:06:49,213 events.views INFO     wislan.lima@gmail.com: 123: 245: 's updating events and reseding emails if necessary
+2022-04-04 21:07:32,626 django.request ERROR    Internal Server Error: /event/create/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 46, in post
+    return self.form_invalid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 61, in form_invalid
+    return self.render_to_response(self.get_context_data(form=form))
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 67, in get_context_data
+    return super().get_context_data(**kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\detail.py", line 94, in get_context_data
+    if self.object:
+AttributeError: 'EventCreateView' object has no attribute 'object'
+2022-04-04 21:07:57,467 events.views INFO     wislan.lima@gmail.com: zz: 246: 's saved and google calendar saved
+2022-04-04 21:08:03,512 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:08:03,987 events.google_factory INFO     wislan.lima@gmail.com: zz: 246: 's Deleting events from google calendar
+2022-04-04 21:08:04,151 events.views INFO     wislan.lima@gmail.com: zz: 246: 's saved and google calendar saved
+2022-04-04 21:15:08,678 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 21:15:17,500 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:15:18,046 events.google_factory INFO     wislan.lima@gmail.com: zz: 246: 's Deleting events from google calendar = quct896je2104aqks7v28v56no
+2022-04-04 21:15:18,132 events.views INFO     wislan.lima@gmail.com: zz: 246: 's The google calendar was removed?
+2022-04-04 21:15:20,574 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:15:21,018 events.google_factory INFO     wislan.lima@gmail.com: zz: 246: 's Deleting events from google calendar
+2022-04-04 21:15:21,150 events.views INFO     wislan.lima@gmail.com: zz: 246: 's saved and google calendar saved
+2022-04-04 21:18:58,595 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:18:59,124 events.google_factory INFO     wislan.lima@gmail.com: zz: 246: 's Deleting events from google calendar = 3mtlgmbusn6uqgmek5bu26n9sk
+2022-04-04 21:18:59,180 events.views INFO     wislan.lima@gmail.com: zz: 246: 's The google calendar was removed?
+2022-04-04 21:19:01,674 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:19:02,225 events.google_factory INFO     wislan.lima@gmail.com: zz: 246: 's Deleting events from google calendar
+2022-04-04 21:19:02,373 events.views INFO     wislan.lima@gmail.com: zz: 246: 's saved and google calendar saved
+2022-04-04 21:24:21,248 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 21:24:38,945 events.views INFO     wislan.lima@gmail.com: bb: 247: 's saved and google calendar saved
+2022-04-04 21:24:43,484 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:25:08,221 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:25:26,700 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:25:36,248 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 21:25:43,788 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:31:45,852 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 21:32:11,671 events.views INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's saved and google calendar saved
+2022-04-04 21:32:15,818 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:32:16,532 events.google_factory INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's Deleting events from google calendar
+2022-04-04 21:32:16,675 events.views INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's saved and google calendar saved
+2022-04-04 21:33:53,783 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:33:54,220 events.google_factory INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's Deleting events from google calendar = uds9sokakb9adfest903pa0hgg
+2022-04-04 21:33:54,295 events.views INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's The google calendar was removed?
+2022-04-04 21:33:57,794 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:33:58,451 events.google_factory INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's Deleting events from google calendar
+2022-04-04 21:33:58,602 events.views INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's saved and google calendar saved
+2022-04-04 21:36:05,766 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:36:06,430 events.google_factory INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's Deleting events from google calendar = 20uj5susb0sdj13i977plnepv0
+2022-04-04 21:36:06,496 events.views INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's The google calendar was removed?
+2022-04-04 21:36:09,648 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:36:10,372 events.google_factory INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's Deleting events from google calendar
+2022-04-04 21:36:10,504 events.views INFO     wislan.lima@gmail.com: aaaaaaaabbbbb: 248: 's saved and google calendar saved
+2022-04-04 21:42:11,270 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 21:42:42,914 django.request ERROR    Internal Server Error: /event/create/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\events\views.py", line 46, in post
+    return self.form_invalid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 61, in form_invalid
+    return self.render_to_response(self.get_context_data(form=form))
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 67, in get_context_data
+    return super().get_context_data(**kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\detail.py", line 94, in get_context_data
+    if self.object:
+AttributeError: 'EventCreateView' object has no attribute 'object'
+2022-04-04 21:42:50,986 events.views INFO     wislan.lima@gmail.com: x: 249: 's saved and google calendar saved
+2022-04-04 21:42:54,612 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:42:55,349 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's Deleting events from google calendar
+2022-04-04 21:42:55,512 events.views INFO     wislan.lima@gmail.com: x: 249: 's saved and google calendar saved
+2022-04-04 21:43:25,211 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:43:25,688 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's a Calendar was added into you google calendar
+2022-04-04 21:43:25,688 events.views INFO     wislan.lima@gmail.com: x: 249: 's updating events and reseding emails if necessary
+2022-04-04 21:43:35,366 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:43:35,777 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's Deleting events from google calendar = t3nbh47jrnurpf09cpask523m8
+2022-04-04 21:43:35,822 events.views INFO     wislan.lima@gmail.com: x: 249: 's The google calendar was removed?
+2022-04-04 21:43:52,550 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:43:53,065 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's Deleting events from google calendar
+2022-04-04 21:43:53,205 events.views INFO     wislan.lima@gmail.com: x: 249: 's saved and google calendar saved
+2022-04-04 21:44:06,833 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:44:07,509 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's a Calendar was added into you google calendar
+2022-04-04 21:44:07,509 events.views INFO     wislan.lima@gmail.com: x: 249: 's updating events and reseding emails if necessary
+2022-04-04 21:44:22,801 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:44:23,386 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's Deleting events from google calendar = 6nbhj0dphbloq9vfag2mquhbls
+2022-04-04 21:44:23,457 events.views INFO     wislan.lima@gmail.com: x: 249: 's The google calendar was removed?
+2022-04-04 21:44:26,943 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:44:27,427 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's Deleting events from google calendar
+2022-04-04 21:44:27,583 events.views INFO     wislan.lima@gmail.com: x: 249: 's saved and google calendar saved
+2022-04-04 21:45:17,269 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:45:17,854 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's a Calendar was added into you google calendar
+2022-04-04 21:45:17,854 events.views INFO     wislan.lima@gmail.com: x: 249: 's updating events and reseding emails if necessary
+2022-04-04 21:45:34,511 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:45:35,038 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's a Calendar was added into you google calendar
+2022-04-04 21:45:35,038 events.views INFO     wislan.lima@gmail.com: x: 249: 's updating events and reseding emails if necessary
+2022-04-04 21:45:45,608 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:45:46,111 events.google_factory INFO     wislan.lima@gmail.com: x: 249: 's Deleting events from google calendar = vpb8hllc777g201jea9ljrgi0s
+2022-04-04 21:45:46,166 events.views INFO     wislan.lima@gmail.com: x: 249: 's The google calendar was removed?
+2022-04-04 21:46:03,252 events.views INFO     wislan.lima@gmail.com: i: 250: 's saved and google calendar saved
+2022-04-04 21:46:07,387 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:46:07,937 events.google_factory INFO     wislan.lima@gmail.com: i: 250: 's Deleting events from google calendar
+2022-04-04 21:46:08,094 events.views INFO     wislan.lima@gmail.com: i: 250: 's saved and google calendar saved
+2022-04-04 21:46:25,970 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:46:26,636 events.google_factory INFO     wislan.lima@gmail.com: i: 250: 's a Calendar was added into you google calendar
+2022-04-04 21:46:26,636 events.views INFO     wislan.lima@gmail.com: i: 250: 's updating events and reseding emails if necessary
+2022-04-04 21:46:39,725 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:46:40,281 events.google_factory INFO     wislan.lima@gmail.com: i: 250: 's a Calendar was added into you google calendar
+2022-04-04 21:46:40,281 events.views INFO     wislan.lima@gmail.com: i: 250: 's updating events and reseding emails if necessary
+2022-04-04 21:46:54,604 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:46:55,148 events.google_factory INFO     wislan.lima@gmail.com: i: 250: 's a Calendar was added into you google calendar
+2022-04-04 21:46:55,148 events.views INFO     wislan.lima@gmail.com: i: 250: 's updating events and reseding emails if necessary
+2022-04-04 21:47:05,001 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:47:05,557 events.google_factory INFO     wislan.lima@gmail.com: i: 250: 's a Calendar was added into you google calendar
+2022-04-04 21:47:05,558 events.views INFO     wislan.lima@gmail.com: i: 250: 's updating events and reseding emails if necessary
+2022-04-04 21:49:36,402 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:49:37,094 events.google_factory INFO     wislan.lima@gmail.com: i: 250: 's a Calendar was added into you google calendar
+2022-04-04 21:49:37,094 events.views INFO     wislan.lima@gmail.com: i: 250: 's updating events and reseding emails if necessary
+2022-04-04 21:49:52,793 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:49:53,523 events.google_factory INFO     wislan.lima@gmail.com: i: 250: 's a Calendar was added into you google calendar
+2022-04-04 21:49:53,524 events.views INFO     wislan.lima@gmail.com: i: 250: 's updating events and reseding emails if necessary
+2022-04-04 21:50:11,181 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:50:11,851 events.google_factory INFO     wislan.lima@gmail.com: i: 250: 's a Calendar was added into you google calendar
+2022-04-04 21:50:11,851 events.views INFO     wislan.lima@gmail.com: i: 250: 's updating events and reseding emails if necessary
+2022-04-04 21:51:39,388 events.views INFO     wislan.lima@gmail.com: new: 251: 's saved and google calendar saved
+2022-04-04 21:52:05,766 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:57:30,377 django.request WARNING  Not Found: /favicon.ico
+2022-04-04 21:58:00,825 events.views INFO     davenagel00@gmail.com: dave chama wislan: 252: 's saved and google calendar saved
+2022-04-04 21:58:32,054 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:59:28,328 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 21:59:28,899 events.google_factory INFO     davenagel00@gmail.com: dave chama wislan: 252: 's Deleting events from google calendar
+2022-04-04 21:59:29,065 events.views INFO     davenagel00@gmail.com: dave chama wislan: 252: 's saved and google calendar saved
+2022-04-04 22:00:04,808 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 22:00:30,539 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 22:17:41,516 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:18:08,142 events.views INFO     wislan.lima@gmail.com: vvvv: 253: 's saved and google calendar saved
+2022-04-04 22:18:19,911 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 22:18:55,260 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 22:18:55,813 events.google_factory INFO     wislan.lima@gmail.com: vvvv: 253: 's Deleting events from google calendar
+2022-04-04 22:18:55,949 events.views INFO     wislan.lima@gmail.com: vvvv: 253: 's saved and google calendar saved
+2022-04-04 22:21:00,545 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 22:21:01,616 events.google_factory INFO     wislan.lima@gmail.com: vvvv: 253: 's Deleting events from google calendar = t0q6njpe1qddf6nndkbrkli0ho
+2022-04-04 22:36:07,813 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:41:46,180 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:42:42,815 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:43:04,221 events.views INFO     wislan.lima@gmail.com: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb: 254: 's saved and google calendar saved
+2022-04-04 22:44:16,847 events.views INFO     wislan.lima@gmail.com: bbbbbb: 254: 's updating events and reseding emails if necessary
+2022-04-04 22:46:22,090 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:46:31,324 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 22:46:32,009 events.google_factory INFO     wislan.lima@gmail.com: bbbbbb: 254: 's Deleting events from google calendar
+2022-04-04 22:46:32,168 events.views INFO     wislan.lima@gmail.com: bbbbbb: 254: 's saved and google calendar saved
+2022-04-04 22:46:39,419 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 22:46:39,852 events.google_factory INFO     wislan.lima@gmail.com: bbbbbb: 254: 's Deleting events from google calendar = v52fnt2cd6b34hjn9783tlvmg8
+2022-04-04 22:46:39,917 events.views INFO     wislan.lima@gmail.com: bbbbbb: 254: 's The google calendar was removed?
+2022-04-04 22:48:06,308 events.views INFO     wislan.lima@gmail.com: abc: 255: 's saved and google calendar saved
+2022-04-04 22:49:07,681 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:53:11,912 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:55:49,687 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:56:48,117 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 22:57:34,489 events.views INFO     davenagel00@gmail.com: v: 256: 's saved and google calendar saved
+2022-04-04 22:59:58,439 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:00:27,107 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:00:27,572 events.google_factory INFO     davenagel00@gmail.com: v: 256: 's Deleting events from google calendar
+2022-04-04 23:00:27,732 events.views INFO     davenagel00@gmail.com: v: 256: 's saved and google calendar saved
+2022-04-04 23:01:01,699 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:02:17,370 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-04 23:03:56,272 events.views INFO     wislan.lima@gmail.com: c: 257: 's saved and google calendar saved
+2022-04-04 23:04:08,322 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:04:17,286 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:04:17,755 events.google_factory INFO     wislan.lima@gmail.com: c: 257: 's Deleting events from google calendar
+2022-04-04 23:04:17,902 events.views INFO     wislan.lima@gmail.com: c: 257: 's saved and google calendar saved
+2022-04-04 23:04:47,053 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:04:47,408 events.google_factory INFO     wislan.lima@gmail.com: c: 257: 's Deleting events from google calendar = 6fhfrh2ah4c6812f7g4muanbag
+2022-04-04 23:04:47,488 events.views INFO     wislan.lima@gmail.com: c: 257: 's The google calendar was removed?
+2022-04-04 23:05:04,816 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:05:05,157 events.google_factory INFO     wislan.lima@gmail.com: c: 257: 's Deleting events from google calendar
+2022-04-04 23:05:05,311 events.views INFO     wislan.lima@gmail.com: c: 257: 's saved and google calendar saved
+2022-04-04 23:05:59,987 events.views INFO     davenagel00@gmail.com: v: 258: 's saved and google calendar saved
+2022-04-04 23:06:08,569 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:06:25,499 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:06:25,914 events.google_factory INFO     davenagel00@gmail.com: v: 258: 's Deleting events from google calendar
+2022-04-04 23:06:26,052 events.views INFO     davenagel00@gmail.com: v: 258: 's saved and google calendar saved
+2022-04-04 23:13:30,314 googleapiclient.discovery_cache INFO     file_cache is only supported with oauth2client<4.0.0
+2022-04-04 23:13:30,922 events.google_factory INFO     davenagel00@gmail.com: v: 258: 's Deleting events from google calendar = 8hhkbs9cdovu3g3kbi6pvcl15s
+2022-04-04 23:13:30,994 events.views INFO     davenagel00@gmail.com: v: 258: 's The google calendar was removed?
