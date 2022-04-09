@@ -1,9 +1,12 @@
 from .base_settings import *
 
 # ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
-if env("HOST_ENV") == 'STAGING':
-    DEBUG = env("DEBUG")
-    ALLOWED_HOSTS = "3.238.103.21"
+# if env("HOST_ENV") == 'STAGING':
+#     DEBUG = env("DEBUG")
+#     ALLOWED_HOSTS = "3.238.103.21"
+
+DEBUG = env("DEBUG")
+ALLOWED_HOSTS = "3.238.103.21"
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = env("EMAIL_HOST")
