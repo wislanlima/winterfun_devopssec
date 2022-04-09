@@ -3,7 +3,7 @@ from .base_settings import *
 # ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 if env("HOST_ENV") == 'PRODUCTION':
     DEBUG = env("DEBUG")
-    ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
+    ALLOWED_HOSTS = "44.202.234.50"
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = env("EMAIL_HOST")
