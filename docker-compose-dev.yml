@@ -97,7 +97,6 @@ services:
     user: root
     build:
       context: ./_dockerfiles/filebeat
-    image: wislan/docker_winterfun:winterfun_filebeat
     volumes:
       - ./_dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker:/var/lib/docker:ro
@@ -107,7 +106,7 @@ services:
       - ELASTICSEARCH_USERNAME=${ELASTICSEARCH_USERNAME}
       - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
       - KIBANA_HOST=${KIBANA_HOST}
-      - ELASTIC_INDEX=winterfun-djangoapi-main-server
+      - ELASTIC_INDEX=filebeat-django-server
     command: [ "--strict.perms=false" ]
     ulimits:
       memlock:
