@@ -47,10 +47,10 @@ services:
       - /var/lib/docker:/var/lib/docker:ro
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - ELASTICSEARCH_HOST=100.26.242.218
+      - ELASTICSEARCH_HOST=18.213.113.96
       - ELASTICSEARCH_USERNAME=elastic
       - ELASTICSEARCH_PASSWORD=changeme
-      - KIBANA_HOST=100.26.242.218
+      - KIBANA_HOST=18.213.113.96
       - ELASTIC_INDEX=winterfun-elastic-search-server
     command: [ "--strict.perms=false" ]
     ulimits:
