@@ -43,7 +43,6 @@ services:
     user: root
     build:
       context: ./_dockerfiles/filebeat
-    image: wislan/docker_winterfun:winterfun_filebeat
     volumes:
       - ./_dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker:/var/lib/docker:ro
