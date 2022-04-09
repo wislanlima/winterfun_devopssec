@@ -91,10 +91,10 @@ services:
       - /var/lib/docker:/var/lib/docker:ro
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - ELASTICSEARCH_HOST=18.213.113.96
+      - ELASTICSEARCH_HOST=${ELASTICSEARCH_HOST}
       - ELASTICSEARCH_USERNAME=elastic
       - ELASTICSEARCH_PASSWORD=changeme
-      - KIBANA_HOST=18.213.113.96
+      - KIBANA_HOST=${KIBANA_HOST}
       - ELASTIC_INDEX=winterfun-filebeat-main-server
     command: [ "--strict.perms=false" ]
     ulimits:
