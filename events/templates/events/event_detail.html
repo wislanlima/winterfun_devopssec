@@ -45,13 +45,13 @@ all profiles
                 <form action="{% url 'events:add-google-calendar' %}" method="POST">
                     {% csrf_token %}
                     <input type="hidden" name="event_id" value={{object.id}}>
-                    <button type="submit" class="btn btn-secondary btn-sm mt-1 mb-1"><i class="plus square icon"></i>Add to Google Calendar</button>
+                    <button type="submit" class="btn btn-secondary btn-sm mt-1 mb-1"><em class="plus square icon"></em>Add to Google Calendar</button>
                 </form>
             {% else %}
                 <form action="{% url 'events:remove-google-calendar' %}" method="POST">
                     {% csrf_token %}
                     <input type="hidden" name="event_id" value={{object.id}}>
-                    <button type="submit" class="btn btn-danger btn-sm mt-1 mb-1"><i class="plus square icon"></i>Remove from Google Calendar</button>
+                    <button type="submit" class="btn btn-danger btn-sm mt-1 mb-1"><em class="plus square icon"></em>Remove from Google Calendar</button>
                 </form>
             {% endif %}
 
