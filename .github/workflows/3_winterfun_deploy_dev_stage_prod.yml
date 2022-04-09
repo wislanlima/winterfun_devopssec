@@ -32,7 +32,8 @@ jobs:
             cd '/home/$USER_NAME/winterfun'
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-            docker- image prune -a -y
+            docker kill winterfun_api
+            docker image prune -a -y
             docker-compose -f docker-compose-dev.yml up -d --build
             "
           elif [ ${{ github.event.inputs.environment_ }} == 'STAGE' ]; then
@@ -43,7 +44,8 @@ jobs:
             cd '/home/$USER_NAME/winterfun'
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-            docker- image prune -a -y
+            docker kill winterfun_api
+            docker image prune -a -y
             docker-compose -f docker-compose-dev.yml up -d --build
             "
           else
@@ -54,7 +56,8 @@ jobs:
             cd '/home/$USER_NAME/winterfun'
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-            docker- image prune -a -y
+            docker kill winterfun_api
+            docker image prune -a -y
             docker-compose -f docker-compose-dev.yml up -d --build
             "
           fi
