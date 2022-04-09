@@ -52,7 +52,7 @@ services:
       - ELASTICSEARCH_USERNAME=${ELASTICSEARCH_USERNAME}
       - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
       - KIBANA_HOST=${KIBANA_HOST}
-      - ELASTIC_INDEX=winterfun-elastic-main-server
+      - ELASTIC_INDEX=winterfun-elastic-server
     command: [ "--strict.perms=false" ]
     ulimits:
       memlock:
