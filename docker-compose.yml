@@ -49,8 +49,8 @@ services:
     image: wislan/docker_winterfun:winterfun_influxdb
     restart: always
     environment:
-      - INFLUXDB_ADMIN_USER_PASSWORD=pdgcloud_devopssec_pwd
-      - INFLUXDB_ADMIN_USER_TOKEN=winterfun_token
+      - INFLUXDB_ADMIN_USER_PASSWORD=${INFLUXDB_ADMIN_USER_PASSWORD}
+      - INFLUXDB_ADMIN_USER_TOKEN=${INFLUXDB_ADMIN_USER_TOKEN}
     ports:
       - "8086:8086"
       - "8088:8088"
@@ -68,9 +68,9 @@ services:
     image: wislan/docker_winterfun:winterfun_telegraf
     environment:
       - HOSTNAME=pgdcloud-devopssec-telegraf
-      - DOCKER_INFLUXDB_INIT_BUCKET=WINTERFUN_WEBAPP
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=winterfun_token
-      - DOCKER_INFLUXDB_INIT_ORG=WINTERFUN_2022
+      - DOCKER_INFLUXDB_INIT_BUCKET=${DOCKER_INFLUXDB_INIT_BUCKET}
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}
+      - DOCKER_INFLUXDB_INIT_ORG=${DOCKER_INFLUXDB_INIT_ORG}
       - INFLUXDB_HOST=influxdb
     volumes:
       # Mount for telegraf configuration
