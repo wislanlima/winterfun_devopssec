@@ -9,3 +9,6 @@ log = logging.getLogger(__name__)
 
 def redis_connect():
     return redis.Redis.from_url(settings.REDIS_URL, decode_responses=True)
+
+
+
