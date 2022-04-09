@@ -34856,3 +34856,5 @@ Traceback (most recent call last):
     raise ConnectionError(self._error_message(e))
 redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
 2022-04-09 15:42:26,138 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-09 21:46:52,658 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-09 22:49:36,832 django.utils.autoreload INFO     Watching for file changes with StatReloader

@@ -2,6 +2,7 @@ from .base_settings import *
 
 # ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 if env("HOST_ENV") == 'DEVELOPMENT':
+    print('dev_settin file HEHH')
     DEBUG = env("DEBUG")
     ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 
