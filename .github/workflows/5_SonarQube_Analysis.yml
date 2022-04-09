@@ -1,12 +1,11 @@
 name: "5 SonarQube to Analysis Code"
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - 'main'
+  pull_request:
 
-#on:
-#  push:
-#    branches:
-#      - main
 jobs:
   build:
     name: Build
