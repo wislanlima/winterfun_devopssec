@@ -46,13 +46,6 @@ def create_cal(instance):
                                            },
                                            sendUpdates='all'
                                            ).execute()
-
-    # print("created event")
-    # print("id: ", event_result['id'])
-    # print("summary: ", event_result['summary'])
-    # print("starts at: ", event_result['start']['dateTime'])
-    # print("ends at: ", event_result['end']['dateTime'])
-
     logger.info(f"{instance}'s Deleting events from google calendar")
     return event_result
 
