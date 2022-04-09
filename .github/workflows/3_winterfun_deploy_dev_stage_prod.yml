@@ -55,7 +55,7 @@ jobs:
             docker-compose -f docker-compose-dev.yml up -d --build
             "
           fi
-          
+
 
   Smoke-Test:
     runs-on: ubuntu-latest
