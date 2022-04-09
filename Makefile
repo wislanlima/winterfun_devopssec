@@ -34,7 +34,8 @@ down-v:
 
 volume:
 	docker volume inspect estate-src_postgres_data
-
+all-volume:
+    docker rm -f $(docker ps -a -q)
 winterfun-db:
 	docker compose exec db psql --username=postgres --dbname=dbwinterfun
 
