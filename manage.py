@@ -11,7 +11,7 @@ def main():
     BASE_DIR = Path(__file__).resolve().parent.parent
     environ.Env.read_env(BASE_DIR / ".env")
     if os.environ.get('HOST_ENV') == 'PRODUCTION':
-        print('manage py prod settings')
+
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'winterfun.prod_settings')
     elif os.environ.get('HOST_ENV') == 'STAGING':
         # print('staging settings')
