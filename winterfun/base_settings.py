@@ -221,7 +221,7 @@ INTERNAL_IPS += [".".join(ip.split(".")[:-1] + ["1"]) for ip in ips]
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 CREDENTIALS_FILE = BASE_DIR / "winterfun/credentials.json"
 
-
+REDIRECT_URI = env("REDIRECT_URI")
 
 
 

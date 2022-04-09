@@ -12,7 +12,7 @@ from googleapiclient.discovery import build
 
 SCOPES = base_settings.SCOPES
 CREDENTIALS_FILE = base_settings.CREDENTIALS_FILE
-REDIRECT_URI = 'http://127.0.0.1:8000/oauth2callback/'
+REDIRECT_URI = base_settings.REDIRECT_URI
 flow = Flow.from_client_secrets_file(
     CREDENTIALS_FILE,
     scopes=SCOPES,
