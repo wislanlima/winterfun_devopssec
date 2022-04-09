@@ -26,32 +26,19 @@ jobs:
         run: |
           if [ ${{ github.event.inputs.environment_ }} == 'PROD' ]; then
             HOSTNAME=${{ secrets.WINTERFUN_PROD_IP  }}
-            echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-            rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/winterfun
-            ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} "
-            cd '/home/$USER_NAME/winterfun'
-            rm private_key
-            docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-            docker-compose -f docker-compose-dev.yml up -d --build
           elif [ ${{ github.event.inputs.environment_ }} == 'STAGE' ]; then
             HOSTNAME=${{ secrets.WINTERFUN_STAGE_IP  }}
-            echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-            rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/winterfun
-            ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} "
-            cd '/home/$USER_NAME/winterfun'
-            rm private_key
-            docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-            docker-compose -f docker-compose-dev.yml up -d --build
           else
             HOSTNAME=${{ secrets.WINTERFUN_DEV_IP  }}
-            echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-            rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/winterfun
-            ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} "
-            cd '/home/$USER_NAME/winterfun'
-            rm private_key
-            docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-            docker-compose -f docker-compose-dev.yml up -d --build
           fi
+
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/winterfun
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} "
+          cd '/home/$USER_NAME/winterfun'
+          rm private_key
+          docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
+          docker-compose -f docker-compose-dev.yml up -d --build
           "
 
   Smoke-Test:
