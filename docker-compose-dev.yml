@@ -6,9 +6,9 @@ services:
       context: ./_dockerfiles/postgres
     image: wislan/docker_winterfun:winterfun_postgres
     environment:
-      POSTGRES_DB: dbwinterfun
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOSTNAME: localhost:5432
       POSTGRES_HOST_AUTH_METHOD: trust
     ports:
@@ -103,10 +103,10 @@ services:
       - /var/lib/docker:/var/lib/docker:ro
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - ELASTICSEARCH_HOST=100.26.242.218
+      - ELASTICSEARCH_HOST=${ELASTICSEARCH_HOST}
       - ELASTICSEARCH_USERNAME=elastic
       - ELASTICSEARCH_PASSWORD=changeme
-      - KIBANA_HOST=100.26.242.218
+      - KIBANA_HOST=${KIBANA_HOST}
       - ELASTIC_INDEX=winterfun-filebeat-main-server
     command: [ "--strict.perms=false" ]
     ulimits:
