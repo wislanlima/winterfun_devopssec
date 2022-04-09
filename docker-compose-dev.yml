@@ -104,10 +104,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - ELASTICSEARCH_HOST=${ELASTICSEARCH_HOST}
-      - ELASTICSEARCH_USERNAME=elastic
-      - ELASTICSEARCH_PASSWORD=changeme
+      - ELASTICSEARCH_USERNAME=${ELASTICSEARCH_USERNAME}
+      - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
       - KIBANA_HOST=${KIBANA_HOST}
-      - ELASTIC_INDEX=winterfun-filebeat-main-server
+      - ELASTIC_INDEX=winterfun-djangoapi-main-server
     command: [ "--strict.perms=false" ]
     ulimits:
       memlock:
