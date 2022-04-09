@@ -33,7 +33,6 @@ jobs:
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
             docker-compose -f docker-compose-dev.yml up -d --build
-
           elif [ ${{ github.event.inputs.environment_ }} == 'STAGE' ]; then
             HOSTNAME=${{ secrets.WINTERFUN_STAGE_IP  }}
             echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
@@ -43,7 +42,6 @@ jobs:
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
             docker-compose -f docker-compose-dev.yml up -d --build
-
           else
             HOSTNAME=${{ secrets.WINTERFUN_DEV_IP  }}
             echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
@@ -53,10 +51,7 @@ jobs:
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
             docker-compose -f docker-compose-dev.yml up -d --build
-
           fi
-
-
           "
 
   Smoke-Test:
