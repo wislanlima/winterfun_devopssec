@@ -35005,3 +35005,10 @@ ValueError: Cannot query "wislan": Must be "Profile" instance.
 2022-04-10 10:46:45,084 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-10 10:50:29,732 events.views INFO     wislan.lima@gmail.com: Test: 259: 's saved and google calendar saved
 2022-04-10 12:01:38,324 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 12:19:47,203 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 12:21:53,059 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 12:22:19,140 django.request WARNING  Not Found: /favicon.ico
+2022-04-10 12:22:45,814 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 12:23:00,476 django.request WARNING  Not Found: /favicon.ico
+2022-04-10 12:23:37,215 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 12:23:45,893 django.request WARNING  Not Found: /favicon.ico

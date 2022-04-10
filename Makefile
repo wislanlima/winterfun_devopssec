@@ -12,7 +12,7 @@ run-server:
 	docker-compose up --build -d --remove-orphans
 
 build-dev-api
-    docker-compose -f docker-compose-dev.yml up -d api --build
+    docker-compose -f docker-compose-dev.yml up -d build api
 
 build-sonarqube
     docker-compose -f docker-compose-sonarqube.yml up -d --build
