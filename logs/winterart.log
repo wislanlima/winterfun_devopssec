@@ -35012,3 +35012,5 @@ ValueError: Cannot query "wislan": Must be "Profile" instance.
 2022-04-10 12:23:00,476 django.request WARNING  Not Found: /favicon.ico
 2022-04-10 12:23:37,215 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-10 12:23:45,893 django.request WARNING  Not Found: /favicon.ico
+2022-04-10 13:24:46,844 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 13:24:55,468 django.request WARNING  Not Found: /favicon.ico
