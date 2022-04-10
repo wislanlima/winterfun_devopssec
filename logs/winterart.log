@@ -34858,3 +34858,149 @@ redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddri
 2022-04-09 15:42:26,138 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-09 21:46:52,658 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-09 22:49:36,832 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 09:32:10,794 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 09:32:25,420 django.request WARNING  Not Found: /favicon.ico
+2022-04-10 09:32:41,403 profiles.signals INFO     mary's creating user profile
+2022-04-10 09:32:45,614 django.request ERROR    Internal Server Error: /users/signup2/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\views.py", line 71, in signup
+    login(request, user)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\__init__.py", line 111, in login
+    request.session.cycle_key()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 344, in cycle_key
+    self.create()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 43, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 196, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 70, in exists
+    return bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\cache\backends\base.py", line 212, in __contains__
+    return self.has_key(key)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis_cache\backends\base.py", line 30, in wrapped
+    return method(self, client, key, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis_cache\backends\base.py", line 374, in has_key
+    return client.exists(key)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\client.py", line 1581, in exists
+    return self.execute_command('EXISTS', *names)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.
+2022-04-10 09:33:13,070 profiles.signals INFO     mary1's creating user profile
+2022-04-10 09:33:32,955 profiles.signals INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\mediafiles\avatar.png ====>  Deleted
+2022-04-10 09:36:59,165 profiles.signals INFO     mary3's creating user profile
+2022-04-10 09:37:30,147 profiles.signals INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\mediafiles\avatar.png ====>  Deleted
+2022-04-10 09:41:40,522 profiles.signals INFO     user_27/avatar/john.JPG  ====>  Deleted
+2022-04-10 09:41:59,074 profiles.signals INFO     mary3's creating user profile
+2022-04-10 09:42:19,334 profiles.signals INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\mediafiles\avatar.png ====>  Deleted
+2022-04-10 09:44:28,821 profiles.signals INFO     user_28/avatar/wislan.JPG  ====>  Deleted
+2022-04-10 09:44:44,857 profiles.signals INFO     mary3's creating user profile
+2022-04-10 09:45:05,917 profiles.signals INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\mediafiles\avatar.png ====>  Deleted
+2022-04-10 09:46:35,452 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 09:46:55,463 profiles.signals INFO     user_29/avatar/thomas.JPG  ====>  Delete image - Deleted
+2022-04-10 09:47:16,283 profiles.signals INFO     mary3's creating user profile
+2022-04-10 09:56:05,756 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 09:56:33,251 profiles.signals INFO     user_30/avatar/thomas.JPG  ====>  Deleted
+2022-04-10 09:57:07,502 profiles.signals INFO     mary3's creating user profile
+2022-04-10 09:57:49,822 profiles.signals INFO     user_31/avatar/luisa.JPG  ====>  Deleted
+2022-04-10 09:58:55,802 profiles.signals INFO     mary3's creating user profile
+2022-04-10 10:09:30,768 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 10:19:33,231 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 10:31:01,802 profiles.signals INFO     dave's profile-wislan's profile-send's pre delete remove from friends
+2022-04-10 10:31:44,086 profiles.signals INFO     dave's profile-wislan's profile-accepted's post save add to friends
+2022-04-10 10:40:39,776 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 10:42:37,227 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 10:42:41,648 django.request ERROR    Internal Server Error: /post/friendpost
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\posts\views.py", line 127, in friend_post
+    return render(request, 'posts/friend_post.html', context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\template\defaulttags.py", line 167, in render
+    values = list(values)
+TypeError: 'Post' object is not iterable
+2022-04-10 10:46:12,529 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 10:46:16,955 django.request ERROR    Internal Server Error: /post/friendpost
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\posts\views.py", line 90, in friend_post
+    qs = Post.objects.all().exclude(author=user)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\db\models\query.py", line 949, in exclude
+    return self._filter_or_exclude(True, args, kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\db\models\query.py", line 966, in _filter_or_exclude_inplace
+    self._query.add_q(~Q(*args, **kwargs))
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\db\models\sql\query.py", line 1320, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\db\models\sql\query.py", line 1147, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\db\models\sql\query.py", line 1128, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "wislan": Must be "Profile" instance.
+2022-04-10 10:46:45,084 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-10 10:50:29,732 events.views INFO     wislan.lima@gmail.com: Test: 259: 's saved and google calendar saved
