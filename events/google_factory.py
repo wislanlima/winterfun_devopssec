@@ -25,14 +25,14 @@ def create_cal(instance):
     end_value = instance.end
     end = end_value.isoformat()
 
-    list = []
+    list_attendees = []
     attendees = instance.accounts.all()
     if attendees is not None:
         for guest in attendees:
             value = {
                 'email': guest.email
             }
-            list.append(value)
+            list_attendees.append(value)
 
     # Send the command to save the event on google
     event_result = service.events().insert(calendarId='primary',
@@ -41,7 +41,7 @@ def create_cal(instance):
                                                "description": instance.description,
                                                "start": {"dateTime": start, "timeZone": 'Etc/Universal'},
                                                "end": {"dateTime": end, "timeZone": 'Etc/Universal'},
-                                               "attendees": list,
+                                               "attendees": list_attendees,
 
                                            },
                                            sendUpdates='all'
