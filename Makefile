@@ -11,6 +11,9 @@ build:
 run-server:
 	docker-compose up --build -d --remove-orphans
 
+build-dev-api
+    docker-compose -f docker-compose-dev.yml up -d api --build
+
 build-sonarqube
     docker-compose -f docker-compose-sonarqube.yml up -d --build
 
@@ -36,7 +39,7 @@ makemigrations:
 	docker-compose exec api python3 manage.py makemigrations
 
 superuser:
-	docker-compose exec api python3 manage.py createsuperuser
+	docker-compose -f docker-compose-dev.yml exec api python3 manage.py createsuperuser
 
 collectstatic:
 	docker-compose exec api python3 manage.py collectstatic --no-input --clear

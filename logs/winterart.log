@@ -35004,3 +35004,4 @@ Traceback (most recent call last):
 ValueError: Cannot query "wislan": Must be "Profile" instance.
 2022-04-10 10:46:45,084 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-10 10:50:29,732 events.views INFO     wislan.lima@gmail.com: Test: 259: 's saved and google calendar saved
+2022-04-10 12:01:38,324 django.utils.autoreload INFO     Watching for file changes with StatReloader
