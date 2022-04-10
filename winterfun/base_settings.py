@@ -126,7 +126,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR)
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [TEMPLATES_DIR,],
+        "DIRS": [
+            TEMPLATES_DIR,
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -164,9 +166,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -214,15 +216,11 @@ hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS += [".".join(ip.split(".")[:-1] + ["1"]) for ip in ips]
 
 
-
-
 """Calendar Config"""
-SCOPES = ['https://www.googleapis.com/auth/calendar']
+SCOPES = ["https://www.googleapis.com/auth/calendar"]
 CREDENTIALS_FILE = BASE_DIR / "winterfun/credentials.json"
 
 REDIRECT_URI = env("REDIRECT_URI")
-
-
 
 
 import logging

@@ -7,6 +7,7 @@ from winterfun.calendar_connection import oauth2callback, require_auth
 
 logger = logging.getLogger(__name__)
 
+
 @require_auth
 def create_cal(instance):
     """
@@ -68,8 +69,7 @@ def update_google_event(instance, calendar_id):
         end_value = instance.end
         end = end_value.isoformat()
 
-
-        list = []
+        list_a = []
         attendees = instance.accounts.all()
         # print(attendees)
         if attendees is not None:
@@ -77,7 +77,7 @@ def update_google_event(instance, calendar_id):
                 value = {
                     'email': guest.email
                 }
-                list.append(value)
+                list_a.append(value)
 
         event_result = service.events().update(
             calendarId='primary',
@@ -99,6 +99,7 @@ def update_google_event(instance, calendar_id):
         logger.info(f"{instance}'s a Calendar was added into you google calendar")
     except googleapiclient.errors.HttpError:
         print("Failed to delete event")
+
 
 @require_auth
 def update_google_event_status(instance, calendar_id, email, status):
@@ -126,6 +127,7 @@ def update_google_event_status(instance, calendar_id, email, status):
 
     except googleapiclient.errors.HttpError:
         print("Failed to delete event")
+
 
 @require_auth
 def delete_google_event(instance, calendar_id):
