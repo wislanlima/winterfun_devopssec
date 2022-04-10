@@ -79,13 +79,15 @@ def friend_post(request):
     """Find users that have accepted"""
     query_set = Relationship.objects.invatations_accepted(profile)
     # print(query_set)
-    qs = []
 
-    for x in query_set:
-        print(x.receiver)
-        post = Post.objects.filter(author=x.receiver)
-        qs.append(post)
-        post = None
+
+    # for x in query_set:
+    #     print(x.receiver)
+    #     post = Post.objects.filter(author=x.receiver)
+    #     qs.append(post)
+    #     post = None
+
+    qs = Post.objects.all().exclude(author=profile)
 
     print(qs)
     # initials

@@ -11,6 +11,15 @@ build:
 run-server:
 	docker-compose up --build -d --remove-orphans
 
+build-sonarqube
+    docker-compose -f docker-compose-sonarqube.yml up -d --build
+
+build-elasticsearch
+    docker-compose -f docker-compose-elastic-search.yml up -d --build
+
+unused-image
+    docker image prune -a
+
 up:
 	docker-compose up -d
 

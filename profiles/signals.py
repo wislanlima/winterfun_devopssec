@@ -31,22 +31,19 @@ def update_user_avatar(sender, instance, **kwargs):
         return False
     new_file = instance.avatar
     if not old_file == new_file:
-        if os.path.isfile(old_file.path):
+        if (os.path.isfile(old_file.path)) and (old_file.name != 'avatar.png'):
             os.remove(old_file.path)
             logger.info(f"{old_file.path} ====>  Deleted")
-
-"""Quando loga chama isso?"""
-# @receiver(post_save, sender=AUTH_USER_MODEL)
-# def save_user_profile(sender, instance, **kwargs):
-#     instance.profile.save()
-#     logger.info(f"{instance}'s save user profile")
+        else:
+            print('user.signal.py update_user_avatar - avatar.png not deleted')
 
 
 @receiver(pre_delete, sender=Profile)
 def delete_image(sender, instance, **kwargs):
     name = instance.avatar.name
+
     if name == 'avatar.png':
-        print('user.signal.py Default.jpg not deleted')
+        print('user.signal.py avatar.jpg not deleted')
     else:
         instance.avatar.delete()
         logger.info(f"{name}  ====>  Deleted")
