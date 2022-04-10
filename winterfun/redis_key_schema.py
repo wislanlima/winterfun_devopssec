@@ -5,6 +5,7 @@ def prefixed_key(f):
     def prefixed_method(self, *args, **kwargs):
         key = f(self, *args, **kwargs)
         return f"{self.prefix}:{key}"
+
     return prefixed_method
 
 
@@ -42,7 +43,7 @@ class key_schema:
         The rendered all users from the model users
         Format: winterfun:user:all
         """
-        return f"user:all"
+        return "user:all"
 
     @prefixed_key
     def google_token(self, username) -> str:
@@ -62,17 +63,17 @@ class key_schema:
 
     @prefixed_key
     def user(self) -> str:
+
         return "users:ids"
 
     @prefixed_key
     def profile_id(self, profile_id: int) -> str:
+
         return f"profile:{profile_id}"
 
 
-
-
-
 def user_list_view():
+
     """
     User.objects.all()
     Format: user:list-view
@@ -81,6 +82,7 @@ def user_list_view():
 
 
 def my_profile_view():
+
     """
 
     Format: profile:my-profile-view
