@@ -83,7 +83,16 @@
                   <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Events
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
+                            <a class="dropdown-item" href="{% url 'events:my-events' %}">My Events</a>
+                            <a class="dropdown-item" href="{% url 'events:event-list' %}">List </a>
+                            <a class="dropdown-item" href="{% url 'events:event-create-view' %}">Create Event(BaseView) </a>
+
+
+                        </div>
+                      </li>
 
                 {% if user.is_staff %}
                       <li class="nav-item dropdown">
