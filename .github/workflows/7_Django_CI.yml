@@ -1,4 +1,4 @@
-name: "8 Django CI: Winterfun"
+name: "7 Django CI: Winterfun"
 
 on:
   push:
