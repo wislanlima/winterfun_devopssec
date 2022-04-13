@@ -9,7 +9,7 @@ terraform {
     cloud {
   organization = "NCI2022PROJECT"
   workspaces {
-    name = "Terraform_Winterfun"
+    name = "TF_WINTERFUN"
   }
 }
 }
@@ -26,7 +26,7 @@ resource "aws_instance" "dev_winterfun" {
   instance_type = "t2.medium"
   subnet_id     = "subnet-065588da7b835f2b9"
   associate_public_ip_address = true
-  key_name = "x21126151_wislan_lima_new"
+  key_name = "x21126151_Wislan_Lima"
   vpc_security_group_ids = ["sg-0f18d077b96cfd4fe"]
 
   tags = {
@@ -37,7 +37,7 @@ resource "aws_instance" "dev_winterfun" {
     host        = self.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = var.pvt_key
+    private_key = var.PVT_KEY
     }
 
 
