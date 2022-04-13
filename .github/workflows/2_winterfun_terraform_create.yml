@@ -57,16 +57,16 @@ jobs:
       - name: Retrieve DEV_IP
         id: ip_outputs
         run: |
-            terraform output -raw winterfun_dev >> dev.txt
+            terraform output -raw dev_winterfun >> dev.txt
             echo "::set-output name=dev::$(<dev.txt)"
-            terraform output -raw winterfun_stage >> stage.txt
+            terraform output -raw stage_winterfun >> stage.txt
             echo "::set-output name=stage::$(<stage.txt)"
-            terraform output -raw winterfun_prod >> prod.txt
+            terraform output -raw prod_winterfun >> prod.txt
             echo "::set-output name=prod::$(<prod.txt)"
-            terraform output -raw winterfun_sonarqube >> sonarqube.txt
+            terraform output -raw sonarqube_winterfun >> sonarqube.txt
             echo "::set-output name=sonarqube::$(<sonarqube.txt)"
-            terraform output -raw winterfun_elk_stack >> winterfun_elk_stack.txt
-            echo "::set-output name=elastic_search::$(<winterfun_elk_stack.txt)"
+            terraform output -raw elk_stack_winterfun >> elk_stack_winterfun.txt
+            echo "::set-output name=elastic_search::$(<elk_stack_winterfun.txt)"
 
       - name: SHOW IPS
         run: |
@@ -74,7 +74,7 @@ jobs:
            echo "STAGE: $(<stage.txt)"
            echo "PROD: $(<prod.txt)"
            echo "SONARQUBE: $(<sonarqube.txt)"
-           echo "SONARQUBE: $(<winterfun_elk_stack.txt)"
+           echo "SONARQUBE: $(<elk_stack_winterfun.txt)"
 
       - name: Save STAGE_IP
         uses: gliech/create-github-secret-action@v1
