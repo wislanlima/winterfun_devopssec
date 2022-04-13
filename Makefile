@@ -37,6 +37,12 @@ migrate:
 
 makemigrations:
 	docker-compose exec api python3 manage.py makemigrations
+stopserver
+    pkill -f runserver
+
+
+runserver:
+	docker-compose -f docker-compose-dev.yml exec api python3 manage.py runserver 8080
 
 superuser:
 	docker-compose -f docker-compose-dev.yml exec api python3 manage.py createsuperuser
