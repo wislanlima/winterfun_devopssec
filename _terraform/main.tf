@@ -9,7 +9,7 @@ terraform {
     cloud {
   organization = "NCI2022PROJECT"
   workspaces {
-    name = "Terraform_Winterfun"
+    name = "TF_WINTERFUN"
   }
 }
 }
