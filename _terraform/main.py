@@ -37,7 +37,7 @@ resource "aws_instance" "dev_winterfun" {
     host        = self.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = var.pvt_key
+    private_key = var.PVT_KEY
     }
 
 
@@ -76,7 +76,7 @@ resource "aws_instance" "stage_winterfun" {
     host        = self.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = var.pvt_key
+    private_key = var.PVT_KEY
     }
 
   # copies file from local directory to remote directory
@@ -113,7 +113,7 @@ resource "aws_instance" "prod_winterfun" {
     host        = self.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = var.pvt_key
+    private_key = var.PVT_KEY
     }
 
   # copies file from local directory to remote directory
@@ -148,7 +148,7 @@ resource "aws_instance" "sonarqube_winterfun" {
     host        = self.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = var.pvt_key
+    private_key = var.PVT_KEY
     }
 
   # copies file from local directory to remote directory
@@ -182,7 +182,7 @@ resource "aws_instance" "elk_stack_winterfun" {
     host        = self.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = var.pvt_key
+    private_key = var.PVT_KEY
     }
 
   # copies file from local directory to remote directory
