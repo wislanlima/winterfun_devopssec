@@ -6,12 +6,10 @@ terraform {
     }
   }
   required_version = ">= 0.14.9"
-
     cloud {
-  organization = "NCI2022"
-
+  organization = "NCI2022PROJECT"
   workspaces {
-    name = "Terraform_Winterfun"
+    name = "TF_WINTERFUN"
   }
 }
 }
