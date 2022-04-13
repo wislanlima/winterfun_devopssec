@@ -23,7 +23,7 @@ provider "aws" {
 #dev instance creation
 resource "aws_instance" "dev_winterfun" {
   ami           = "ami-08ca3fed11864d6bb"
-  instance_type = "t3.medium"
+  instance_type = "t2.medium"
   subnet_id     = "subnet-065588da7b835f2b9"
   associate_public_ip_address = true
   key_name = "x21126151_wislan_lima_new"
@@ -58,9 +58,6 @@ resource "aws_instance" "dev_winterfun" {
 
 }
 
-
-#IP of instances retrieved
-output "prod_winterfun"{
-value = "${aws_instance.prod_winterfun.public_ip}"
+output "dev_winterfun"{
+value = "${aws_instance.dev_winterfun.public_ip}"
 }
-
