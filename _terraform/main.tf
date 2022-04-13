@@ -60,7 +60,7 @@ resource "aws_instance" "dev_winterfun" {
 
 
 #IP of instances retrieved
-output "prod_winterfun"{
-value = "${aws_instance.prod_winterfun.public_ip}"
+output "dev_winterfun"{
+value = "${aws_instance.dev_winterfun.public_ip}"
 }
 
