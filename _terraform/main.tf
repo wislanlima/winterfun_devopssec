@@ -37,7 +37,7 @@ resource "aws_instance" "dev_winterfun" {
     host        = self.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = var.pvt_key
+    private_key = var.PVT_KEY
     }
 
 
