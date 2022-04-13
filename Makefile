@@ -20,6 +20,9 @@ build-sonarqube
 build-elasticsearch
     docker-compose -f docker-compose-elastic-search.yml up -d --build
 
+remove-permission-folder
+    sudo chmod -R 755 certbot
+
 unused-image
     docker image prune -a
 

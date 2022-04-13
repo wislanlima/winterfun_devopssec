@@ -114,6 +114,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+z_env/
+z_env
 
 # mkdocs documentation
 /site

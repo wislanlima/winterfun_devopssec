@@ -34,7 +34,7 @@ jobs:
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
             docker kill winterfun_api
 
-            docker-compose -f docker-compose.yml up -d --build
+            docker-compose -f docker-compose-prod.yml up -d --build
             "
           elif [ ${{ github.event.inputs.environment_ }} == 'STAGE' ]; then
             HOSTNAME=${{ secrets.WINTERFUN_STAGE_IP  }}
@@ -46,7 +46,7 @@ jobs:
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
             docker kill winterfun_api
 
-            docker-compose -f docker-compose.yml up -d --build
+            docker-compose -f docker-compose-stage.yml up -d --build
             "
           else
             HOSTNAME=${{ secrets.WINTERFUN_DEV_IP  }}
