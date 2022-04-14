@@ -33,8 +33,16 @@ jobs:
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
             docker kill winterfun_api
-
-            docker-compose -f docker-compose-prod.yml up -d --build
+            docker-compose down --rmi all -v --remove-orphans
+            docker rmi -f $(docker images -a -q)
+            rm -rf docker-compose.yml docker-compose-dev.yml docker-compose-stage.yml docker-compose-sonarqube.yml docker-compose-influxdb.yml docker-compose-elastic-search.yml
+            rm -rf data/certbot2
+            mv docker-compose-prod.yml docker-compose.yml
+            rm -rf init-letsencrypt.sh
+            rm -rf data/nginx/app.conf
+            mv data/nginx/app2.conf data/nginx/app.conf
+            mv init-letsencrypt2.sh init-letsencrypt.sh
+            docker-compose -f docker-compose.yml up -d --build
             "
           elif [ ${{ github.event.inputs.environment_ }} == 'STAGE' ]; then
             HOSTNAME=${{ secrets.WINTERFUN_STAGE_IP  }}
@@ -46,7 +54,7 @@ jobs:
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
             docker-compose down --rmi all -v --remove-orphans
             docker rmi -f $(docker images -a -q)
-            rm -rf docker-compose.yml, docker-compose-dev.yml, docker-compose-prod.yml, docker-compose-sonarqube.yml, docker-compose-influxdb.yml, docker-compose-elastic-search.yml
+            rm -rf docker-compose.yml docker-compose-dev.yml docker-compose-prod.yml docker-compose-sonarqube.yml docker-compose-influxdb.yml docker-compose-elastic-search.yml
             rm -rf data/certbot
             mv docker-compose-stage.yml docker-compose.yml
             docker-compose -f docker-compose.yml up -d --build
@@ -59,8 +67,9 @@ jobs:
             cd '/home/$USER_NAME/winterfun'
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-            docker kill winterfun_api
-
+            docker-compose down --rmi all -v --remove-orphans
+            docker rmi -f $(docker images -a -q)
+            rm -rf docker-compose-stage.yml docker-compose-dev.yml docker-compose-prod.yml docker-compose-sonarqube.yml docker-compose-influxdb.yml docker-compose-elastic-search.yml
             docker-compose -f docker-compose.yml up -d --build
             "
           fi
