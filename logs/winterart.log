@@ -35014,3 +35014,4 @@ ValueError: Cannot query "wislan": Must be "Profile" instance.
 2022-04-10 12:23:45,893 django.request WARNING  Not Found: /favicon.ico
 2022-04-10 13:24:46,844 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-10 13:24:55,468 django.request WARNING  Not Found: /favicon.ico
+2022-04-14 15:10:27,484 environ.environ INFO     C:\Users\wislan\Documents\GitHub\.env not found - if you're not configuring your environment separately, check this.
