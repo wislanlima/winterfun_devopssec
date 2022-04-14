@@ -1,4 +1,4 @@
-name: "6 Deploy Elastic Search: Winter Fun"
+name: "9 Deploy InfluxDB: Winter Fun"
 
 on:
   workflow_dispatch:
@@ -21,9 +21,9 @@ jobs:
           HOSTNAME=${{ secrets.WINTERFUN_INFLUXDB  }}
 
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-          rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/elasticsearch
+          rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/influxdb
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} "
-          cd '/home/$USER_NAME/elasticsearch'
+          cd '/home/$USER_NAME/influxdb'
           rm private_key
           docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
           docker-compose -f docker-compose-influxdb.yml up -d --build
