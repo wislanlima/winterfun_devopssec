@@ -59,6 +59,28 @@ services:
     networks:
       - winterfun_network
 
+  telegraf:
+    # later versions of telegraf cannot be run as root.
+    # see: https://www.influxdata.com/blog/docker-run-telegraf-as-non-root/
+    container_name: telegraf
+    user: root
+    restart: always
+    build:
+      context: ./_dockerfiles/telegraf
+    environment:
+      - HOSTNAME= telegraf-sonarqube
+      - DOCKER_INFLUXDB_INIT_BUCKET=TELEGRAF-SONAR
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}
+      - DOCKER_INFLUXDB_INIT_ORG=${DOCKER_INFLUXDB_INIT_ORG}
+      - INFLUXDB_HOST=${INFLUXDB_HOST}
+    volumes:
+      # Mount for telegraf configuration
+      - ./_dockerfiles/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+      # Mount for Docker API access
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - winterfun_network
+
 networks:
     winterfun_network:
         driver: bridge

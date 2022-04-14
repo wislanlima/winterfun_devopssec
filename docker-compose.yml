@@ -56,8 +56,8 @@ services:
     build:
       context: ./_dockerfiles/telegraf
     environment:
-      - HOSTNAME= telegraf-django-server
-      - DOCKER_INFLUXDB_INIT_BUCKET=${DOCKER_INFLUXDB_INIT_BUCKET}
+      - HOSTNAME= telegraf-dev
+      - DOCKER_INFLUXDB_INIT_BUCKET=TELEGRAF-DEV
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}
       - DOCKER_INFLUXDB_INIT_ORG=${DOCKER_INFLUXDB_INIT_ORG}
       - INFLUXDB_HOST=${INFLUXDB_HOST}
@@ -85,7 +85,7 @@ services:
       - ELASTICSEARCH_USERNAME=${ELASTICSEARCH_USERNAME}
       - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
       - KIBANA_HOST=${KIBANA_HOST}
-      - ELASTIC_INDEX=filebeat-django-server
+      - ELASTIC_INDEX=filebeat-dev-server
     command: [ "--strict.perms=false" ]
     ulimits:
       memlock:

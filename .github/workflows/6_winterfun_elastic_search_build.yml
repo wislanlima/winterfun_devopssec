@@ -2,13 +2,6 @@ name: "6 Deploy Elastic Search: Winter Fun"
 
 on:
   workflow_dispatch:
-  # push:
-  #  branches: [ master ]
-    inputs:
-      environment_:
-        type: string
-        required: true
-        description: Environment [ELK]
 
 jobs:
   Deploy:
@@ -24,9 +17,8 @@ jobs:
             USER_NAME : ubuntu
 
         run: |
-          if [ ${{ github.event.inputs.environment_ }} == 'ELK' ]; then
-            HOSTNAME=${{ secrets.WINTERFUN_ELASTIC_SEARCH_IP  }}
-          fi
+
+        HOSTNAME=${{ secrets.WINTERFUN_ELASTIC_SEARCH_IP  }}
 
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/elasticsearch

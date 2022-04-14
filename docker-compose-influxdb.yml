@@ -26,8 +26,8 @@ services:
     build:
       context: ./_dockerfiles/telegraf
     environment:
-      - HOSTNAME= telegraf-influx-server
-      - DOCKER_INFLUXDB_INIT_BUCKET=${DOCKER_INFLUXDB_INIT_BUCKET}
+      - HOSTNAME= telegraf-influxdb
+      - DOCKER_INFLUXDB_INIT_BUCKET=TELEGRAF-INFLUXDB
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}
       - DOCKER_INFLUXDB_INIT_ORG=${DOCKER_INFLUXDB_INIT_ORG}
       - INFLUXDB_HOST=${INFLUXDB_HOST}

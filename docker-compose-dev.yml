@@ -44,20 +44,8 @@ services:
     networks:
       - winterfun_network
 
-  influxdb:
-    container_name: influxdb
-    image: wislan/docker_winterfun:winterfun_influxdb
-    restart: always
-    environment:
-      - INFLUXDB_ADMIN_USER_PASSWORD=${INFLUXDB_ADMIN_USER_PASSWORD}
-      - INFLUXDB_ADMIN_USER_TOKEN=${INFLUXDB_ADMIN_USER_TOKEN}
-    ports:
-      - "8086:8086"
-      - "8088:8088"
-    volumes:
-      - influxdb:/bitnami/influxdb
-    networks:
-      - winterfun_network
+
+
 
   telegraf:
     # later versions of telegraf cannot be run as root.
@@ -67,11 +55,11 @@ services:
     restart: always
     image: wislan/docker_winterfun:winterfun_telegraf
     environment:
-      - HOSTNAME=pgdcloud-devopssec-telegraf
-      - DOCKER_INFLUXDB_INIT_BUCKET=${DOCKER_INFLUXDB_INIT_BUCKET}
+      - HOSTNAME=telegraf-dev
+      - DOCKER_INFLUXDB_INIT_BUCKET=TELEGRAF-DEV
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}
       - DOCKER_INFLUXDB_INIT_ORG=${DOCKER_INFLUXDB_INIT_ORG}
-      - INFLUXDB_HOST=influxdb
+      - INFLUXDB_HOST=${INFLUXDB_HOST}
     volumes:
       # Mount for telegraf configuration
       - ./_dockerfiles/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
@@ -95,7 +83,7 @@ services:
       - ELASTICSEARCH_USERNAME=${ELASTICSEARCH_USERNAME}
       - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
       - KIBANA_HOST=${KIBANA_HOST}
-      - ELASTIC_INDEX=filebeat-django-server
+      - ELASTIC_INDEX=filebeat-dev-server
     command: [ "--strict.perms=false" ]
     ulimits:
       memlock:

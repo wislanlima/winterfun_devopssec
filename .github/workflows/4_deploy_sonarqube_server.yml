@@ -2,13 +2,6 @@ name: "4 Deploy SonarQube: Winter Fun"
 
 on:
   workflow_dispatch:
-  # push:
-  #  branches: [ master ]
-    inputs:
-      environment_:
-        type: string
-        required: true
-        description: Environment [SONARQUBE]
 
 jobs:
   Deploy:
@@ -24,9 +17,8 @@ jobs:
             USER_NAME : ubuntu
 
         run: |
-          if [ ${{ github.event.inputs.environment_ }} == 'SONARQUBE' ]; then
-            HOSTNAME=${{ secrets.WINTERFUN_SONARQUBE  }}
-          fi
+
+        HOSTNAME=${{ secrets.WINTERFUN_SONARQUBE  }}
 
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/sonarqube
