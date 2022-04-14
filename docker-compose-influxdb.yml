@@ -1,0 +1,78 @@
+version: "3.8"
+services:
+
+  influxdb:
+    container_name: influxdb
+    restart: always
+    build:
+      context: ./_dockerfiles/influxdb
+    environment:
+      - INFLUXDB_ADMIN_USER_PASSWORD=${INFLUXDB_ADMIN_USER_PASSWORD}
+      - INFLUXDB_ADMIN_USER_TOKEN=${INFLUXDB_ADMIN_USER_TOKEN}
+    ports:
+      - "8086:8086"
+      - "8088:8088"
+    volumes:
+      - influxdb:/bitnami/influxdb
+    networks:
+      - winterfun_network
+
+  telegraf:
+    # later versions of telegraf cannot be run as root.
+    # see: https://www.influxdata.com/blog/docker-run-telegraf-as-non-root/
+    container_name: telegraf
+    user: root
+    restart: always
+    build:
+      context: ./_dockerfiles/telegraf
+    environment:
+      - HOSTNAME= telegraf-influx-server
+      - DOCKER_INFLUXDB_INIT_BUCKET=${DOCKER_INFLUXDB_INIT_BUCKET}
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}
+      - DOCKER_INFLUXDB_INIT_ORG=${DOCKER_INFLUXDB_INIT_ORG}
+      - INFLUXDB_HOST=${INFLUXDB_HOST}
+    volumes:
+      # Mount for telegraf configuration
+      - ./_dockerfiles/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+      # Mount for Docker API access
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - winterfun_network
+
+  filebeat:
+    container_name: filebeat
+    restart: always
+    user: root
+    build:
+      context: ./_dockerfiles/filebeat
+    volumes:
+      - ./_dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - ELASTICSEARCH_HOST=${ELASTICSEARCH_HOST}
+      - ELASTICSEARCH_USERNAME=${ELASTICSEARCH_USERNAME}
+      - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
+      - KIBANA_HOST=${KIBANA_HOST}
+      - ELASTIC_INDEX=filebeat-influx-server
+    command: [ "--strict.perms=false" ]
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    stdin_open: true
+    tty: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "50"
+    networks:
+      - winterfun_network
+
+networks:
+    winterfun_network:
+        driver: bridge
+volumes:
+    influxdb:
+        driver: local

@@ -67,6 +67,8 @@ jobs:
             echo "::set-output name=sonarqube::$(<sonarqube.txt)"
             terraform output -raw elk_stack_winterfun >> elk_stack_winterfun.txt
             echo "::set-output name=elastic_search::$(<elk_stack_winterfun.txt)"
+            terraform output -raw influxdb_winterfun >> influxdb_winterfun.txt
+            echo "::set-output name=influxdb::$(<influxdb_winterfun.txt)"
 
       - name: SHOW IPS
         run: |
@@ -74,7 +76,8 @@ jobs:
            echo "STAGE: $(<stage.txt)"
            echo "PROD: $(<prod.txt)"
            echo "SONARQUBE: $(<sonarqube.txt)"
-           echo "SONARQUBE: $(<elk_stack_winterfun.txt)"
+           echo "ELK Stack: $(<elk_stack_winterfun.txt)"
+           echo "INFLUXDB: $(<influxdb_winterfun.txt)"
 
       - name: Save STAGE_IP
         uses: gliech/create-github-secret-action@v1
@@ -109,4 +112,11 @@ jobs:
         with:
             name: WINTERFUN_ELASTIC_SEARCH_IP
             value: ${{ steps.ip_outputs.outputs.elastic_search }}
+            pa_token: ${{ secrets.GIT_HUB_TOKEN }}
+
+      - name: Save INFLUXDB_IP
+        uses: gliech/create-github-secret-action@v1
+        with:
+            name: WINTERFUN_INFLUXDB
+            value: ${{ steps.ip_outputs.outputs.influxdb }}
             pa_token: ${{ secrets.GIT_HUB_TOKEN }}
