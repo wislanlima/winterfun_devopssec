@@ -134,5 +134,4 @@ volumes:
         driver: local
     static_volume:
     media_volume:
-    influxdb:
-        driver: local
+    filebeat:

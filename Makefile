@@ -21,7 +21,12 @@ build-elasticsearch
     docker-compose -f docker-compose-elastic-search.yml up -d --build
 
 remove-permission-folder
-    sudo chmod -R 755 certbot
+    sudo chmod -rwx 755 certbot
+remove-permission-folder-2
+    sudo chmod -R a+rwx ./certbot
+
+filebeatlogs:
+    tail -f filebeat-20220414.ndjson
 
 unused-image
     docker image prune -a
