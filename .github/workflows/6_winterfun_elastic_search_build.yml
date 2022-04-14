@@ -18,7 +18,7 @@ jobs:
 
         run: |
 
-        HOSTNAME=${{ secrets.WINTERFUN_ELASTIC_SEARCH_IP  }}
+          HOSTNAME=${{ secrets.WINTERFUN_ELASTIC_SEARCH_IP  }}
 
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           rsync -auvz -e "ssh -o StrictHostKeyChecking=no -i private_key" --exclude='*/.git/*' -r "$(pwd)/" ${USER_NAME}@${HOSTNAME}:/home/${USER_NAME}/elasticsearch
