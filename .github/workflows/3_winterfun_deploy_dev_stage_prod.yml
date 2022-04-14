@@ -46,9 +46,9 @@ jobs:
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
             docker-compose down --rmi all -v --remove-orphans
             docker rmi -f $(docker images -a -q)
-            rm -rf docker-compose.yml
+            rm -rf docker-compose.yml, docker-compose-dev.yml
             mv docker-compose-stage.yml docker-compose.yml
-            docker-compose -f docker-compose-stage.yml up -d --build
+            docker-compose -f docker-compose.yml up -d --build
             "
           else
             HOSTNAME=${{ secrets.WINTERFUN_DEV_IP  }}
