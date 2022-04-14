@@ -49,7 +49,7 @@ jobs:
             rm -rf docker-compose.yml, docker-compose-dev.yml, docker-compose-prod.yml, docker-compose-sonarqube.yml, docker-compose-influxdb.yml, docker-compose-elastic-search.yml
             rm -rf data/certbot
             mv docker-compose-stage.yml docker-compose.yml
-            
+            docker-compose -f docker-compose.yml up -d --build
             "
           else
             HOSTNAME=${{ secrets.WINTERFUN_DEV_IP  }}
