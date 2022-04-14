@@ -35015,3 +35015,65 @@ ValueError: Cannot query "wislan": Must be "Profile" instance.
 2022-04-10 13:24:46,844 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2022-04-10 13:24:55,468 django.request WARNING  Not Found: /favicon.ico
 2022-04-14 15:10:27,484 environ.environ INFO     C:\Users\wislan\Documents\GitHub\.env not found - if you're not configuring your environment separately, check this.
+2022-04-14 19:27:42,842 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-14 19:27:57,641 django.request WARNING  Not Found: /favicon.ico
+2022-04-14 19:28:12,871 django.request ERROR    Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\views.py", line 119, in form_valid
+    login(self.request, user)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\auth\__init__.py", line 111, in login
+    request.session.cycle_key()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 344, in cycle_key
+    self.create()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 43, in create
+    self._session_key = self._get_new_session_key()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 196, in _get_new_session_key
+    if not self.exists(session_key):
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\contrib\sessions\backends\cache.py", line 70, in exists
+    return bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\django\core\cache\backends\base.py", line 212, in __contains__
+    return self.has_key(key)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis_cache\backends\base.py", line 30, in wrapped
+    return method(self, client, key, *args, **kwargs)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis_cache\backends\base.py", line 374, in has_key
+    return client.exists(key)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\client.py", line 1581, in exists
+    return self.execute_command('EXISTS', *names)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\wislan\Documents\GitHub\winterfun_devopssec\venv\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.
+2022-04-14 19:33:13,326 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-14 19:51:26,887 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-14 20:22:27,462 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
+2022-04-14 20:25:01,830 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
+2022-04-14 20:29:51,888 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
+2022-04-14 20:30:01,201 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
+2022-04-14 20:31:03,852 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
+2022-04-14 20:32:32,467 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
+2022-04-14 20:34:04,226 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
+2022-04-14 20:34:44,376 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\migrations\.env not found - if you're not configuring your environment separately, check this.

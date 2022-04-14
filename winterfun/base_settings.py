@@ -42,7 +42,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
 ]
-SITE_ID = 1
+SITE_ID = 2
 
 THIRD_PARTY_APPS = [
     "rest_framework",

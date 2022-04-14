@@ -36,7 +36,6 @@ jobs:
             docker-compose down --rmi all -v --remove-orphans
             docker rmi -f $(docker images -a -q)
             rm -rf docker-compose.yml docker-compose-dev.yml docker-compose-stage.yml docker-compose-sonarqube.yml docker-compose-influxdb.yml docker-compose-elastic-search.yml
-            rm -rf data/certbot2
             mv docker-compose-prod.yml docker-compose.yml
             rm -rf init-letsencrypt.sh
             rm -rf data/nginx/app.conf
