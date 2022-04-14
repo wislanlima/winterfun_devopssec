@@ -5,30 +5,33 @@ ENV_FILE_PARAM = --env-file .env
 
 endif
 
+restart-nginx:
+    docker-compose exec nginx nginx -s reload
+
 build:
 	docker-compose up --build -d --remove-orphans
 
 run-server:
 	docker-compose up --build -d --remove-orphans
 
-build-dev-api
+build-dev-api:
     docker-compose -f docker-compose-dev.yml up -d build api
 
-build-sonarqube
+build-sonarqube:
     docker-compose -f docker-compose-sonarqube.yml up -d --build
 
-build-elasticsearch
+build-elasticsearch:
     docker-compose -f docker-compose-elastic-search.yml up -d --build
 
-remove-permission-folder
+remove-permission-folder:
     sudo chmod -rwx 755 certbot
-remove-permission-folder-2
+remove-permission-folder-2:
     sudo chmod -R a+rwx ./certbot
 
 filebeatlogs:
     tail -f filebeat-20220414.ndjson
 
-unused-image
+unused-image:
     docker image prune -a
 
 up:
@@ -45,7 +48,7 @@ migrate:
 
 makemigrations:
 	docker-compose exec api python3 manage.py makemigrations
-stopserver
+stopserver:
     pkill -f runserver
 
 

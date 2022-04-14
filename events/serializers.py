@@ -24,5 +24,6 @@ class EventSerializer(serializers.ModelSerializer):
             'start',
             'end',
             'accounts',
+            'added_to_google_calendar',
             'calendar_event_events'
         )
