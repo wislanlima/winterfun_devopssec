@@ -32,7 +32,6 @@ jobs:
             cd '/home/$USER_NAME/winterfun'
             rm private_key
             docker login --username ${{ secrets.DOCKER_UN }} --password ${{ secrets.DOCKER_PWD }}
-            docker kill winterfun_api
             docker-compose down --rmi all -v --remove-orphans
             docker rmi -f $(docker images -a -q)
             rm -rf docker-compose.yml docker-compose-dev.yml docker-compose-stage.yml docker-compose-sonarqube.yml docker-compose-influxdb.yml docker-compose-elastic-search.yml

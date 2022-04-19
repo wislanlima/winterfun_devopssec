@@ -35077,3 +35077,6 @@ redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. No c
 2022-04-14 20:32:32,467 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
 2022-04-14 20:34:04,226 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\.env not found - if you're not configuring your environment separately, check this.
 2022-04-14 20:34:44,376 environ.environ INFO     C:\Users\wislan\Documents\GitHub\winterfun_devopssec\users\migrations\.env not found - if you're not configuring your environment separately, check this.
+2022-04-15 18:16:04,173 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2022-04-15 18:16:04,855 environ.environ WARNING  Invalid line: USE_S3 = FALSE
+2022-04-15 18:16:58,042 django.utils.autoreload INFO     Watching for file changes with StatReloader

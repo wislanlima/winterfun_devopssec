@@ -2,7 +2,6 @@ from .base_settings import *
 
 
 if env("HOST_ENV") == 'DEVELOPMENT':
-
     DEBUG = env("DEBUG")
     ALLOWED_HOSTS = ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 
