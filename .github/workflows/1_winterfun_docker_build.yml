@@ -1,5 +1,4 @@
 name: "1 Build_Docker and Push_Docker: WinterFun"
-
 on:
   push:
     branches:
