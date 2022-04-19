@@ -35,11 +35,8 @@ jobs:
             docker-compose down --rmi all -v --remove-orphans
             docker rmi -f $(docker images -a -q)
             rm -rf docker-compose.yml docker-compose-dev.yml docker-compose-stage.yml docker-compose-sonarqube.yml docker-compose-influxdb.yml docker-compose-elastic-search.yml
+            rm -rf data/certbot
             mv docker-compose-prod.yml docker-compose.yml
-            rm -rf init-letsencrypt.sh
-            rm -rf data/nginx/app.conf
-            mv data/nginx/app2.conf data/nginx/app.conf
-            mv init-letsencrypt2.sh init-letsencrypt.sh
             docker-compose -f docker-compose.yml up -d --build
             "
           elif [ ${{ github.event.inputs.environment_ }} == 'STAGE' ]; then
