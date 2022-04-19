@@ -19,7 +19,7 @@ jobs:
           python-version: 3
 
       - name: Install deps
-        run: pip install -r codebase/requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Launch tests & generate report
         run: pytest
@@ -27,4 +27,4 @@ jobs:
       - name: Launch the action
         uses: ewjoachim/coverage-comment-action@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
