@@ -56,8 +56,8 @@ services:
     build:
       context: ./_dockerfiles/telegraf
     environment:
-      - HOSTNAME= telegraf-dev
-      - DOCKER_INFLUXDB_INIT_BUCKET=TELEGRAF-DEV
+      - HOSTNAME= telegraf-prod
+      - DOCKER_INFLUXDB_INIT_BUCKET=TELEGRAF-PROD
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}
       - DOCKER_INFLUXDB_INIT_ORG=${DOCKER_INFLUXDB_INIT_ORG}
       - INFLUXDB_HOST=${INFLUXDB_HOST}
@@ -85,7 +85,7 @@ services:
       - ELASTICSEARCH_USERNAME=${ELASTICSEARCH_USERNAME}
       - ELASTICSEARCH_PASSWORD=${ELASTICSEARCH_PASSWORD}
       - KIBANA_HOST=${KIBANA_HOST}
-      - ELASTIC_INDEX=filebeat-dev-server
+      - ELASTIC_INDEX=filebeat-prod-server
     command: [ "--strict.perms=false" ]
     ulimits:
       memlock:
