@@ -25,6 +25,7 @@ build-elasticsearch:
 
 remove-permission-folder:
     sudo chmod -rwx 755 certbot
+
 remove-permission-folder-2:
     sudo chmod -R a+rwx ./certbot
 
@@ -40,8 +41,6 @@ up:
 down:
 	docker-compose down
 
-
-
 volume:
 	docker-volume inspect estate-src_postgres_data
 
@@ -53,7 +52,6 @@ gitvolt:
     git reset --hard
     git pull
 
-
 show-logs:
 	docker-compose logs
 
@@ -62,9 +60,9 @@ migrate:
 
 makemigrations:
 	docker-compose exec api python3 manage.py makemigrations
+
 stopserver:
     pkill -f runserver
-
 
 runserver:
 	docker-compose -f docker-compose-dev.yml exec api python3 manage.py runserver 8080
@@ -77,7 +75,6 @@ collectstatic:
 
 down-v:
 	docker-compose down -v
-
 
 winterfun-db:
 	docker-compose exec db psql --username=postgres --dbname=dbwinterfun
