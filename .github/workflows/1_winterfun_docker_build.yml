@@ -1,7 +1,7 @@
 name: "1 Build_Docker and Push_Docker: WinterFun"
-
-on:
-  workflow_dispatch:
+#
+#on:
+#  workflow_dispatch:
 
   workflow_call:
     secrets:
@@ -9,9 +9,10 @@ on:
         required: true
       DOCKER_PWD:
         required: true
-  #push:
-  #  branches:
-  #    - 'main'
+on:
+  push:
+    branches:
+      - 'main'
 
 jobs:
   BuildStart:
