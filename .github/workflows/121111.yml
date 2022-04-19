@@ -31,7 +31,7 @@ jobs:
     - name: Format code with black
       run: |
         # stop the build if code does not conform to black formatting
-        black --check --line-length=79 . --'''
+        black --check --line-length=79 . --extend-exclude = '''
                                            ^/(
                                              (
                                                  \winerfun
