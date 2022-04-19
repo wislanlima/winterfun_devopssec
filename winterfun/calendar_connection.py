@@ -8,7 +8,7 @@ from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
 
-
+from django.contrib import messages
 
 SCOPES = base_settings.SCOPES
 CREDENTIALS_FILE = base_settings.CREDENTIALS_FILE
@@ -77,10 +77,11 @@ def oauth2callback(request):
         flow.fetch_token(code=code)
         json_creds = flow.credentials.to_json()
         cache.set(key_google_token, json_creds, timeout=TWO_DAYS)
-        service = build('calendar', 'v3', credentials=json_creds)
-        return service
+        return redirect('events:event-list')
     # If the '/auth' URL is not requested (with valid parameters)
     # in a OAuth2 authentication flow, redirect to home page
     except Exception as e:
+        print(str(e))
+        messages.warning(request, 'Unable to connect to Google')
         return redirect('/')
-    return redirect('/')
+    return redirect('events:event-list')

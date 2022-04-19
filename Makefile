@@ -15,7 +15,7 @@ run-server:
 	docker-compose up --build -d --remove-orphans
 
 build-dev-api:
-    docker-compose -f docker-compose-dev.yml up -d build api
+    docker-compose up --build -d --remove-orphans api
 
 build-sonarqube:
     docker-compose -f docker-compose-sonarqube.yml up -d --build
@@ -39,6 +39,20 @@ up:
 
 down:
 	docker-compose down
+
+
+
+volume:
+	docker-volume inspect estate-src_postgres_data
+
+all-volume:
+    docker volume rm $(docker volume ls -q)
+
+
+gitvolt:
+    git reset --hard
+    git pull
+
 
 show-logs:
 	docker-compose logs
@@ -64,11 +78,6 @@ collectstatic:
 down-v:
 	docker-compose down -v
 
-volume:
-	docker-volume inspect estate-src_postgres_data
-
-all-volume:
-    docker rm -f $(docker ps -a -q)
 
 winterfun-db:
 	docker-compose exec db psql --username=postgres --dbname=dbwinterfun
