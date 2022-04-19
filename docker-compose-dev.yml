@@ -2,7 +2,8 @@ version: "3.8"
 services:
   db:
     container_name: postgres
-    image: wislan/docker_winterfun:winterfun_postgres
+    build:
+      context: ./_dockerfiles/postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -16,7 +17,8 @@ services:
 
   redis:
     container_name: redis
-    image: wislan/docker_winterfun:winterfun_redis
+    build:
+      context: ./_dockerfiles/redis
     expose:
       - "6379"
     ports:
@@ -25,8 +27,9 @@ services:
       - winterfun_network
 
   api:
-    container_name: api
-    image: wislan/docker_winterfun:winterfun_api
+    build:
+        context: .
+        dockerfile: ./_dockerfiles/local/django/Dockerfile
     command: /start
     volumes:
       - .:/app
@@ -44,16 +47,14 @@ services:
     networks:
       - winterfun_network
 
-
-
-
   telegraf:
     # later versions of telegraf cannot be run as root.
     # see: https://www.influxdata.com/blog/docker-run-telegraf-as-non-root/
     container_name: telegraf
     user: root
     restart: always
-    image: wislan/docker_winterfun:winterfun_telegraf
+    build:
+      context: ./_dockerfiles/telegraf
     environment:
       - HOSTNAME=telegraf-dev
       - DOCKER_INFLUXDB_INIT_BUCKET=TELEGRAF-DEV
@@ -73,7 +74,8 @@ services:
     container_name: filebeat
     restart: always
     user: root
-    image: wislan/docker_winterfun:winterfun_filebeat
+    build:
+      context: ./_dockerfiles/filebeat
     volumes:
       - ./_dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker:/var/lib/docker:ro
@@ -99,6 +101,8 @@ services:
     networks:
       - winterfun_network
 
+
+
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
@@ -111,6 +115,7 @@ services:
       - "5051:80"
     networks:
       - winterfun_network
+
 
   nginx:
     build:

@@ -2,8 +2,7 @@ version: "3.8"
 services:
   db:
     container_name: postgres
-    build:
-      context: ./_dockerfiles/postgres
+    image: wislan/docker_winterfun:winterfun_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -17,8 +16,7 @@ services:
 
   redis:
     container_name: redis
-    build:
-      context: ./_dockerfiles/redis
+    image: wislan/docker_winterfun:winterfun_redis
     expose:
       - "6379"
     ports:
@@ -27,9 +25,8 @@ services:
       - winterfun_network
 
   api:
-    build:
-        context: .
-        dockerfile: ./_dockerfiles/local/django/Dockerfile
+    container_name: api
+    image: wislan/docker_winterfun:winterfun_api
     command: /start
     volumes:
       - .:/app
@@ -47,16 +44,18 @@ services:
     networks:
       - winterfun_network
 
+
+
+
   telegraf:
     # later versions of telegraf cannot be run as root.
     # see: https://www.influxdata.com/blog/docker-run-telegraf-as-non-root/
     container_name: telegraf
     user: root
     restart: always
-    build:
-      context: ./_dockerfiles/telegraf
+    image: wislan/docker_winterfun:winterfun_telegraf
     environment:
-      - HOSTNAME= telegraf-dev
+      - HOSTNAME=telegraf-dev
       - DOCKER_INFLUXDB_INIT_BUCKET=TELEGRAF-DEV
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${DOCKER_INFLUXDB_INIT_ADMIN_TOKEN}
       - DOCKER_INFLUXDB_INIT_ORG=${DOCKER_INFLUXDB_INIT_ORG}
@@ -74,8 +73,7 @@ services:
     container_name: filebeat
     restart: always
     user: root
-    build:
-      context: ./_dockerfiles/filebeat
+    image: wislan/docker_winterfun:winterfun_filebeat
     volumes:
       - ./_dockerfiles/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker:/var/lib/docker:ro
@@ -101,7 +99,6 @@ services:
     networks:
       - winterfun_network
 
-
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
@@ -115,27 +112,17 @@ services:
     networks:
       - winterfun_network
 
-
   nginx:
-    image: nginx:1.15-alpine
-    restart: unless-stopped
+    build:
+      context: ./_dockerfiles/nginx
+    restart: always
+    depends_on:
+      - api
     volumes:
-      - ./data/nginx:/etc/nginx/conf.d
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
     ports:
       - "80:80"
-      - "443:443"
-    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
-    networks:
-      - winterfun_network
-  certbot:
-    image: certbot/certbot
-    restart: unless-stopped
-    volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
     networks:
       - winterfun_network
 
