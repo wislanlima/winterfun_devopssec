@@ -3,6 +3,7 @@ asgiref==3.4.1
 atomicwrites==1.4.0
 attrs==21.4.0
 black==21.6b0
+cachetools==5.0.0
 certifi==2021.10.8
 cffi==1.15.0
 charset-normalizer==2.0.7
@@ -10,7 +11,7 @@ click==8.0.4
 colorama==0.4.4
 coreapi==2.3.3
 coreschema==0.0.4
-coverage==6.1.2
+coverage==6.3.2
 cryptography==36.0.1
 defusedxml==0.7.1
 Deprecated==1.2.13
