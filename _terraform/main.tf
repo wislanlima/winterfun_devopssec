@@ -12,8 +12,8 @@ terraform {
   workspaces {
     name = "TF_WINTERFUN"
   }
-      */
-}
+      
+}*/
 }
 
 provider "aws" {
