@@ -1,3 +1,4 @@
+/*
 terraform {
   required_providers {
     aws = {
@@ -6,14 +7,32 @@ terraform {
     }
   }
   required_version = ">= 1.1.8"
-  /*
+  
     cloud {
   organization = "NCI2022PROJECT"
   workspaces {
     name = "TF_WINTERFUN"
   }
       
-}*/
+}
+}
+
+provider "aws" {
+  profile = "default"
+  region  = "eu-west-1"
+}
+
+*/
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.28.0"
+    }
+  }
+
+  required_version = ">= 1.1.8"
 }
 
 provider "aws" {
