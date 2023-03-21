@@ -6,14 +6,12 @@ terraform {
     }
   }
   required_version = ">= 1.1.8"
-  
-    cloud {
-  organization = "NCI2022"
-  workspaces {
-    name = "Terraform_Winterfun"
+  cloud {
+    organization = "NCI2022"
+    workspaces {
+      name = "Terraform_Winterfun"
+    }
   }
-      
-}
 }
 
 provider "aws" {
