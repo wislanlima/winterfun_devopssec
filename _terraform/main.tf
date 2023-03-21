@@ -6,11 +6,13 @@ terraform {
     }
   }
   required_version = ">= 1.1.8"
+  /*
     cloud {
   organization = "NCI2022PROJECT"
   workspaces {
     name = "TF_WINTERFUN"
   }
+      */
 }
 }
 
